@@ -7,6 +7,7 @@ public class Hunger : MonoBehaviour
     [SerializeField] private float hungerAmount = 100f; // lower over time, once gets to 0 the fish dies
     [SerializeField] private bool isHungry = false;
     // Start is called before the first frame update
+
     void Start()
     {
         StartCoroutine(HungerTimer());
