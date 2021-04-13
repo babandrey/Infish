@@ -1,25 +1,57 @@
 fileFormatVersion: 2
 guid: f812001bbcdb0194c9ccc6659c6c91e0
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: DS DSi - McDonalds eCrew Development Program JPN - Food and Drink_0
-    21300002: DS DSi - McDonalds eCrew Development Program JPN - Food and Drink_1
-    21300004: DS DSi - McDonalds eCrew Development Program JPN - Food and Drink_2
-    21300006: DS DSi - McDonalds eCrew Development Program JPN - Food and Drink_3
-    21300008: DS DSi - McDonalds eCrew Development Program JPN - Food and Drink_4
-    21300010: DS DSi - McDonalds eCrew Development Program JPN - Food and Drink_5
-    21300012: DS DSi - McDonalds eCrew Development Program JPN - Food and Drink_6
-    21300014: DS DSi - McDonalds eCrew Development Program JPN - Food and Drink_7
-    21300016: DS DSi - McDonalds eCrew Development Program JPN - Food and Drink_8
-    21300018: DS DSi - McDonalds eCrew Development Program JPN - Food and Drink_9
-    21300020: DS DSi - McDonalds eCrew Development Program JPN - Food and Drink_10
-    21300022: DS DSi - McDonalds eCrew Development Program JPN - Food and Drink_11
-    21300024: DS DSi - McDonalds eCrew Development Program JPN - Food and Drink_12
-    21300026: DS DSi - McDonalds eCrew Development Program JPN - Food and Drink_13
-    21300028: DS DSi - McDonalds eCrew Development Program JPN - Food and Drink_14
-    21300030: DS DSi - McDonalds eCrew Development Program JPN - Food and Drink_15
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: DS DSi - McDonalds eCrew Development Program JPN - Food and Drink_0
+  - first:
+      213: 21300002
+    second: DS DSi - McDonalds eCrew Development Program JPN - Food and Drink_1
+  - first:
+      213: 21300004
+    second: DS DSi - McDonalds eCrew Development Program JPN - Food and Drink_2
+  - first:
+      213: 21300006
+    second: DS DSi - McDonalds eCrew Development Program JPN - Food and Drink_3
+  - first:
+      213: 21300008
+    second: DS DSi - McDonalds eCrew Development Program JPN - Food and Drink_4
+  - first:
+      213: 21300010
+    second: DS DSi - McDonalds eCrew Development Program JPN - Food and Drink_5
+  - first:
+      213: 21300012
+    second: DS DSi - McDonalds eCrew Development Program JPN - Food and Drink_6
+  - first:
+      213: 21300014
+    second: DS DSi - McDonalds eCrew Development Program JPN - Food and Drink_7
+  - first:
+      213: 21300016
+    second: DS DSi - McDonalds eCrew Development Program JPN - Food and Drink_8
+  - first:
+      213: 21300018
+    second: DS DSi - McDonalds eCrew Development Program JPN - Food and Drink_9
+  - first:
+      213: 21300020
+    second: DS DSi - McDonalds eCrew Development Program JPN - Food and Drink_10
+  - first:
+      213: 21300022
+    second: DS DSi - McDonalds eCrew Development Program JPN - Food and Drink_11
+  - first:
+      213: 21300024
+    second: DS DSi - McDonalds eCrew Development Program JPN - Food and Drink_12
+  - first:
+      213: 21300026
+    second: DS DSi - McDonalds eCrew Development Program JPN - Food and Drink_13
+  - first:
+      213: 21300028
+    second: DS DSi - McDonalds eCrew Development Program JPN - Food and Drink_14
+  - first:
+      213: 21300030
+    second: DS DSi - McDonalds eCrew Development Program JPN - Food and Drink_15
   externalObjects: {}
-  serializedVersion: 9
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -39,6 +71,7 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -70,11 +103,15 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
   platformSettings:
-  - serializedVersion: 2
+  - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -85,6 +122,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -104,6 +142,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: a0a9eb149ce55b34289a55d337161d2f
+      internalID: 21300000
       vertices: []
       indices: 
       edges: []
@@ -124,6 +163,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 37bb957150c8b1041abf274d8c9c854a
+      internalID: 21300002
       vertices: []
       indices: 
       edges: []
@@ -144,6 +184,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 8f1fe92147e4b9a4eb8d158fe6679745
+      internalID: 21300004
       vertices: []
       indices: 
       edges: []
@@ -164,6 +205,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: f8293a56366b05c468f25988e3bf4570
+      internalID: 21300006
       vertices: []
       indices: 
       edges: []
@@ -184,6 +226,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 22bd6ef4117153b46aa027a1cf1e7bf8
+      internalID: 21300008
       vertices: []
       indices: 
       edges: []
@@ -204,6 +247,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 5a25e00e859baa74a943c46bbeef68dc
+      internalID: 21300010
       vertices: []
       indices: 
       edges: []
@@ -224,6 +268,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: daa1ead8f6fc23d43a147f8d2317a4db
+      internalID: 21300012
       vertices: []
       indices: 
       edges: []
@@ -244,6 +289,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 80d65c570d7f1e04283a0dc9fb7d703a
+      internalID: 21300014
       vertices: []
       indices: 
       edges: []
@@ -264,6 +310,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: ddd9fbd9418f8f04b8a3f3e223e9d380
+      internalID: 21300016
       vertices: []
       indices: 
       edges: []
@@ -284,6 +331,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 259aa7947039990429c4759325aad89e
+      internalID: 21300018
       vertices: []
       indices: 
       edges: []
@@ -304,6 +352,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: d9931f59e62e1324ca3a835c41af9749
+      internalID: 21300020
       vertices: []
       indices: 
       edges: []
@@ -324,6 +373,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 3b6ef714c8481344ebd009a07bcd795c
+      internalID: 21300022
       vertices: []
       indices: 
       edges: []
@@ -344,6 +394,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 1e67819e6140ec94dbcdcfa991c4a2e2
+      internalID: 21300024
       vertices: []
       indices: 
       edges: []
@@ -364,6 +415,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 8b9bc86f057e9384da80a1a6fc5afa1f
+      internalID: 21300026
       vertices: []
       indices: 
       edges: []
@@ -384,6 +436,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 503dd403ea0a82b4fb2d24e9f4b7cbd2
+      internalID: 21300028
       vertices: []
       indices: 
       edges: []
@@ -404,6 +457,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 0a9f61a4196361f4b997a3522229bcea
+      internalID: 21300030
       vertices: []
       indices: 
       edges: []
@@ -412,10 +466,12 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 0c4a637854d0cce488fa158c256eb812
+    internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
+    secondaryTextures: []
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
