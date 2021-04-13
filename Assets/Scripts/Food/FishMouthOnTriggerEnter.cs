@@ -19,8 +19,12 @@ public class FishMouthOnTriggerEnter : MonoBehaviour
 
             if (food != null)
             {
-                fishHunger.HungerAmount += food.restoreAmount;
+                fishHunger.HungerTimer = food.health;
                 Destroy(food.gameObject);
+            }
+            else
+            {
+                Debug.LogWarning("No food script found on the trigger entered");
             }
         }
     }

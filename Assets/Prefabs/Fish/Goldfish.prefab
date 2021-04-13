@@ -262,5 +262,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf8ba874f43e68e4f93ed3d8d31d55c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hungerAmount: 100
+  hungerTimer: 30
+  hungerStartValue: 15
   isHungry: 0
+  spriteRenderer: {fileID: 7486072874299557657}
+  hungryColor: {r: 0, g: 1, b: 0.1816504, a: 1}
