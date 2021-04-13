@@ -1,5 +1,6 @@
 # Infish
- Insaquarium Deluxe inspired game. Aimed to be a rougelike.
+ Insaniquarium Deluxe inspired game. Aimed to be a rougelike.
+ Game kinda plays like an intense idle game, but still stradegy based.
  
 # TODO List: (Specific)
 
@@ -10,6 +11,10 @@ Food object pooler.
 # TODO List: (Non specific)
 
 Generic food implemntation - right now not correct.
+
+Figure out death implemintation - at first just if all fish die, but other then that need more things to keep the player on his toes.
+Maybe some virus that fish can get where you need to buy a antidote, a time limit for a level, more dangerous aliens etc.
+The death in this game restarts the run - you only have 1 life.
 
 Generic level implementation:
  - For every level have amount of 8 Button slots you can put in a Level Manager.
@@ -25,4 +30,4 @@ Generic game design:
    -  Definitly need to play with the numbers, but this is the base concept.
  
  - The FSC will have sinergies with eachother. 
- - The game is souposed to be harder than Insaquarium Deluxe, other than multitasking need to figure out how to make the game harder, harder enemies or enviornment, or some difficulty levels.
+ - The game is souposed to be harder than Insaquarium Deluxe, other than multitasking need to figure out how to make the game harder, harder enemies or enviornment, or some difficulty levels(Easy, Medium, Hard etc.)
