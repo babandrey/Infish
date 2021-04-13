@@ -19,7 +19,7 @@ public class FishMouthOnTriggerEnter : MonoBehaviour
 
             if (food != null)
             {
-                fishHunger.HungerTimer = food.health;
+                fishHunger.HungerTimer = food.Health;
                 Destroy(food.gameObject);
             }
             else

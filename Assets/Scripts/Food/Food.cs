@@ -5,19 +5,20 @@ using UnityEngine;
 [System.Serializable]
 public class Food : MonoBehaviour
 {
-    private string foodName;
+    [SerializeField] string foodName;
     private Sprite sprite;
-    public float health = 30;
+    [SerializeField] private float health = 30;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        
+        sprite = GetComponent<SpriteRenderer>().sprite;
     }
 
-    // Update is called once per frame
-    void Update()
+    public float Health
     {
-        
+        get
+        {
+            return health;
+        }
     }
 }
