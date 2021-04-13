@@ -1,57 +1,53 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Hunger : MonoBehaviour
 {
-    [SerializeField] private float hungerAmount = 100f; // lower over time, once gets to 0 the fish dies
+    [SerializeField] private float hungerTimer = 30f; // lower over time, once gets to 0 the fish dies
+    [SerializeField] private float hungerStartValue = 15f;
     [SerializeField] private bool isHungry = false;
+    [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] private Color hungryColor;
+    private Color normalColor;
+
     // Start is called before the first frame update
 
     void Start()
     {
-        StartCoroutine(HungerTimer());
+        normalColor = spriteRenderer.color;
     }
 
     void Update()
     {
-        if(hungerAmount < 50 && !isHungry)
+        hungerTimer -= Time.deltaTime;
+
+        if(hungerTimer < hungerStartValue && !isHungry) //fish became hungry
         {
             isHungry = true;
+            spriteRenderer.color = hungryColor;
         }
-        else if(hungerAmount > 50 && isHungry)
+        else if(hungerTimer > hungerStartValue && isHungry) //fish just ate
         {
             isHungry = false;
+            spriteRenderer.color = normalColor;
         }
-    }
-
-    IEnumerator HungerTimer()
-    {
-        while (hungerAmount != 0)
+        else if (hungerTimer <= 0)
         {
-            hungerAmount -= 0.5f;
-            yield return new WaitForSeconds(0.05f);
+            Destroy(gameObject);
         }
-
-        Destroy(gameObject);
     }
 
-    public float HungerAmount
+    public float HungerTimer
     {
         get
         {
-            return hungerAmount;
+            return hungerTimer;
         }
         set
         {
-            if(value > 100)
-            {
-                hungerAmount = 100;
-            }
-            else
-            {
-                hungerAmount = value;
-            }
+            hungerTimer = value;
         }
     }
 

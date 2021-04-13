@@ -7,12 +7,12 @@ public class Food : MonoBehaviour
 {
     private string foodName;
     private Sprite sprite;
-    public float restoreAmount = 20f;
+    public float health = 30;
 
     // Start is called before the first frame update
     void Start()
     {
-        restoreAmount = 20f;
+        
     }
 
     // Update is called once per frame
