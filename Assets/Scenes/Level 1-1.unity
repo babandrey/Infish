@@ -295,13 +295,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabArray:
   - {fileID: 7486072874299557660, guid: 228c90d8a5afc91468275178dab6e2d1, type: 3}
-  - {fileID: 7486072874299557660, guid: 228c90d8a5afc91468275178dab6e2d1, type: 3}
-  - {fileID: 7486072874299557660, guid: 228c90d8a5afc91468275178dab6e2d1, type: 3}
-  - {fileID: 7486072874299557660, guid: 228c90d8a5afc91468275178dab6e2d1, type: 3}
-  - {fileID: 7486072874299557660, guid: 228c90d8a5afc91468275178dab6e2d1, type: 3}
-  - {fileID: 7486072874299557660, guid: 228c90d8a5afc91468275178dab6e2d1, type: 3}
-  - {fileID: 7486072874299557660, guid: 228c90d8a5afc91468275178dab6e2d1, type: 3}
-  - {fileID: 7486072874299557660, guid: 228c90d8a5afc91468275178dab6e2d1, type: 3}
 --- !u!4 &298682351
 Transform:
   m_ObjectHideFlags: 0

@@ -8,10 +8,13 @@ public class Food : MonoBehaviour
     [SerializeField] string foodName;
     private Sprite sprite;
     [SerializeField] private float health = 30;
+    private IStatus[] statuses;
 
     private void Start()
     {
         sprite = GetComponent<SpriteRenderer>().sprite;
+
+        statuses = GetComponents<IStatus>();
     }
 
     public float Health
@@ -19,6 +22,14 @@ public class Food : MonoBehaviour
         get
         {
             return health;
+        }
+    }
+
+    public IStatus[] Statuses
+    {
+        get
+        {
+            return statuses;
         }
     }
 

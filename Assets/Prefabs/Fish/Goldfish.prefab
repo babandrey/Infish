@@ -86,7 +86,6 @@ GameObject:
   - component: {fileID: 114513666964208656}
   - component: {fileID: 7486072874299557662}
   - component: {fileID: 114689332038343048}
-  - component: {fileID: 2854007720427252866}
   - component: {fileID: 1707798489157371929}
   m_Layer: 11
   m_Name: Goldfish
@@ -269,19 +268,6 @@ MonoBehaviour:
   isHungry: 0
   spriteRenderer: {fileID: 7486072874299557657}
   hungryColor: {r: 0, g: 1, b: 0.1816504, a: 1}
---- !u!114 &2854007720427252866
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7486072874299557660}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37eeeb3777741c343a223b9898baedb8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speedAmount: 6.81
 --- !u!114 &1707798489157371929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -289,7 +275,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7486072874299557660}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e4fd6c23829a7244984852c937817c8e, type: 3}
   m_Name: 
