@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SpeedStatus : MonoBehaviour, IStatus
 {
+    [Range(1f, 10f)]
     [SerializeField] private float speedAmount;
 
     public void Activate(Transform fish)
