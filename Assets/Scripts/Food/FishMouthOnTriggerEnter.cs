@@ -19,6 +19,13 @@ public class FishMouthOnTriggerEnter : MonoBehaviour
 
             if (food != null)
             {
+                IStatus[] statuses = food.GetComponents<IStatus>();
+
+                foreach(IStatus status in statuses)
+                {
+                    //status.Activate(fish);
+                }
+
                 fishHunger.HungerTimer = food.Health;
                 Destroy(food.gameObject);
             }
