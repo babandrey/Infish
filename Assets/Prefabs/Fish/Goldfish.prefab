@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8848009992547928774}
   - component: {fileID: 1443289744615711963}
   - component: {fileID: 3130195188041335741}
-  m_Layer: 8
+  m_Layer: 11
   m_Name: Fish Mouth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,7 +45,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.19223171, y: 0.0018663406}
+  m_Offset: {x: 0.43170434, y: -0.009164259}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -56,7 +56,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.1228261, y: 0.14522171}
+  m_Size: {x: 0.18590581, y: 0.2562544}
   m_EdgeRadius: 0
 --- !u!114 &3130195188041335741
 MonoBehaviour:
@@ -80,14 +80,15 @@ GameObject:
   m_Component:
   - component: {fileID: 7486072874299557656}
   - component: {fileID: 7486072874299557657}
-  - component: {fileID: 7486072874299557662}
   - component: {fileID: 7486072874299557663}
   - component: {fileID: 7486072874299557659}
   - component: {fileID: 7486072874299557658}
   - component: {fileID: 114513666964208656}
+  - component: {fileID: 7486072874299557662}
   - component: {fileID: 114689332038343048}
   - component: {fileID: 2854007720427252866}
-  m_Layer: 8
+  - component: {fileID: 1707798489157371929}
+  m_Layer: 11
   m_Name: Goldfish
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -160,19 +161,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7486072874299557662
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7486072874299557660}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efb2e90e8297e8841b42f16f3a42d86a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxSpeed: 1.25
 --- !u!50 &7486072874299557663
 Rigidbody2D:
   serializedVersion: 4
@@ -251,6 +239,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38c66e30a16498940a052ada03389ac7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7486072874299557662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7486072874299557660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efb2e90e8297e8841b42f16f3a42d86a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxSpeed: 1.25
 --- !u!114 &114689332038343048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -281,3 +282,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedAmount: 6.81
+--- !u!114 &1707798489157371929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7486072874299557660}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4fd6c23829a7244984852c937817c8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

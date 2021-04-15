@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CreateAquariumBorders : MonoBehaviour
 {
@@ -48,11 +49,17 @@ public class CreateAquariumBorders : MonoBehaviour
         //Change our scale and positions to match the edges of the screen...   
         rightCollider.localScale = new Vector3(colDepth, screenSize.y * 2, colDepth);
         rightCollider.position = new Vector3(cameraPos.x + screenSize.x + (rightCollider.localScale.x * 0.5f), cameraPos.y, zPosition);
+
         leftCollider.localScale = new Vector3(colDepth, screenSize.y * 2, colDepth);
         leftCollider.position = new Vector3(cameraPos.x - screenSize.x - (leftCollider.localScale.x * 0.5f), cameraPos.y, zPosition);
+
+        RectTransform buttonGrid = GameObject.Find("Button Grid").GetComponent<RectTransform>();
         topCollider.localScale = new Vector3(screenSize.x * 2, colDepth, colDepth);
-        topCollider.position = new Vector3(cameraPos.x, cameraPos.y + screenSize.y + (topCollider.localScale.y * 0.5f), zPosition);
+        topCollider.position = new Vector3(cameraPos.x, (cameraPos.y + screenSize.y + (topCollider.localScale.y * 0.5f)) - (buttonGrid.anchorMin.y * 2) , zPosition);
+        
+
+
         bottomCollider.localScale = new Vector3(screenSize.x * 2, colDepth, colDepth);
-        bottomCollider.position = new Vector3(cameraPos.x, cameraPos.y - screenSize.y - (bottomCollider.localScale.y * 0.5f), zPosition);
+        bottomCollider.position = new Vector3(cameraPos.x, (cameraPos.y - screenSize.y - (bottomCollider.localScale.y * 0.5f)) + 0.5f, zPosition);
     }
 }

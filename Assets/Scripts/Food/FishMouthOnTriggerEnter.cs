@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class FishMouthOnTriggerEnter : MonoBehaviour
 {
+    IFish fish;
     Hunger fishHunger;
 
     private void Start()
     {
+        fish = gameObject.GetComponentInParent<IFish>();
         fishHunger = gameObject.GetComponentInParent<Hunger>();
     }
 
@@ -19,6 +21,8 @@ public class FishMouthOnTriggerEnter : MonoBehaviour
 
             if (food != null)
             {
+                fish.Eat(food);
+
                 IStatus[] statuses = food.GetComponents<IStatus>();
 
                 foreach(IStatus status in statuses)
@@ -28,10 +32,6 @@ public class FishMouthOnTriggerEnter : MonoBehaviour
 
                 fishHunger.HungerTimer = food.Health;
                 Destroy(food.gameObject);
-            }
-            else
-            {
-                Debug.LogWarning("No food script found on the trigger entered");
             }
         }
     }
