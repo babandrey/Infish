@@ -5,18 +5,39 @@ using UnityEngine;
 [System.Serializable]
 public class Food : MonoBehaviour
 {
-    private string foodName;
+    [SerializeField] string foodName;
     private Sprite sprite;
+    [SerializeField] private float health = 30;
+    private IStatus[] statuses;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        
+        sprite = GetComponent<SpriteRenderer>().sprite;
+
+        statuses = GetComponents<IStatus>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public float Health
     {
-        
+        get
+        {
+            return health;
+        }
+    }
+
+    public IStatus[] Statuses
+    {
+        get
+        {
+            return statuses;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.name == "Bottom Collider")
+        {
+            Destroy(gameObject, 1f);
+        }
     }
 }

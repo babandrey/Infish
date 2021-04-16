@@ -5,10 +5,11 @@ using UnityEngine;
 public class RandomMovement : MonoBehaviour
 {
     private float timeLeft;
-    private Vector2 moveTo = new Vector2(1f,0f);
+    private Vector2 moveTo = new Vector2(1f,0f); // always face on the right side first
+
     [Range(0.0f, 10f)]
-    [SerializeField]
-    private float maxSpeed = 1f;
+    [SerializeField] private float maxSpeed = 1f;
+
     private Animator animator;
 
     private void Awake()
