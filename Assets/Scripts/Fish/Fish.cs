@@ -17,17 +17,6 @@ public class Fish : MonoBehaviour
         
     }
 
-    private void Eat(Food food)
-    {
-        foreach (IStatus status in food.Statuses)
-        {
-            status.Activate(transform);
-        }
-
-        hunger.HungerTimer = food.Health;
-        Destroy(food.gameObject);
-    }
-
     public void CheckCollision(Collider2D collision)
     {
         if (hunger.IsHungry)
@@ -36,8 +25,19 @@ public class Fish : MonoBehaviour
 
             if (food != null)
             {
-                Eat(food); 
+                Eat(food);
             }
         }
+    }
+
+    private void Eat(Food food)
+    {
+        foreach (IStatus status in food.Statuses)
+        {
+            status.Activate(transform);
+        }
+
+        hunger.HungerTimer = food.Health;
+        food.gameObject.SetActive(false);
     }
 }

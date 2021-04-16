@@ -6,28 +6,42 @@ using UnityEngine.EventSystems;
 public class FoodManager : MonoBehaviour
 {
     [SerializeField] private Camera cam;
+    [SerializeField] private Food[] foodPrefabList;
+    public int FoodsOnScreen { get; set; } = 0;
 
-    [SerializeField] private Food[] foodList;
+    private int maxFoodAmount = 1;
     private Food currentFood;
+
+    #region Singleton
+
+    public static FoodManager instance;
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
+    #endregion
 
     // Start is called before the first frame update
     void Start()
     {
-        currentFood = foodList[0];
+        currentFood = foodPrefabList[0];
     }
 
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && FoodsOnScreen < maxFoodAmount)
         {
             if (EventSystem.current.currentSelectedGameObject == null) //checks if we pressed a button
             {
                 Vector3 position = cam.ScreenToWorldPoint(Input.mousePosition);
                 position.z = 0;
-                Instantiate(currentFood.gameObject, position, currentFood.transform.rotation, transform.Find("Food")); // change to object pooler
+                GameObject foodSpawned = ObjectPooler.instance.SpawnFromPool(currentFood.name, position, currentFood.transform.rotation);
             }
         }
     }
 
+    
 }
