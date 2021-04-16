@@ -2,17 +2,9 @@
 Clickup Page - https://app.clickup.com/3837097/v/l/3n359-1181
 
  Insaniquarium Deluxe inspired game. Aimed to be a rougelike.
- Game should play like an intense idle game, but still stradegy based.
+ Game should play like an intense idle game, but still strategy based.
  
-# TODO List: (Specific)
-
-Make movement script use either random movement OR if the fish is hungry and theres food on the screen make it move towards the food.
-
-Food object pooler.
-
 # TODO List: (Non specific)
-
-Generic food implemntation - right now not correct.
 
 Figure out death implemintation - at first just if all fish die, but other then that need more things to keep the player on his toes.
 Maybe some virus that fish can get where you need to buy a antidote, a time limit for a level, more dangerous aliens etc.
