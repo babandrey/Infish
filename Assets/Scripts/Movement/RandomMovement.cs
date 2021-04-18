@@ -9,7 +9,6 @@ public class RandomMovement : MonoBehaviour
 
     [Range(0.0f, 10f)]
     [SerializeField] private float maxSpeed = 1f;
-
     private Animator animator;
 
     private void Awake()

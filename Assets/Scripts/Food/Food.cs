@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class Food : MonoBehaviour
+public class Food : MonoBehaviour, IEdible
 {
-    [SerializeField] string foodName;
+    [SerializeField] private new string name;
+    [SerializeField] private float health;
     private Sprite sprite;
-    [SerializeField] private float health = 30;
-    public IStatus[] Statuses { get; private set; }
+    private IStatus[] statuses;
 
     private void Start()
     {
         sprite = GetComponent<SpriteRenderer>().sprite;
-        Statuses = GetComponents<IStatus>();
+        statuses = GetComponents<IStatus>();
     }
 
     private void OnEnable()
@@ -26,12 +26,19 @@ public class Food : MonoBehaviour
         FoodManager.instance.FoodsOnScreen--;
     }
 
-    public float Health
+    public string Name
     {
-        get
-        {
-            return health;
-        }
+        get { return name; }
+        set { name = value; }
+    }
+    public float Health
+    { 
+        get { return health; }
+        set { health = value; }
+    }
+    public IStatus[] Statuses
+    {
+        get{ return statuses; }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

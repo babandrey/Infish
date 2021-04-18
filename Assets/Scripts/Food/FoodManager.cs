@@ -9,7 +9,8 @@ public class FoodManager : MonoBehaviour
     [SerializeField] private Food[] foodPrefabList;
     public int FoodsOnScreen { get; set; } = 0;
 
-    private int maxFoodAmount = 1;
+    [Range(1, 10)]
+    [SerializeField] private int maxFoodAmount = 1;
     private Food currentFood;
 
     #region Singleton
