@@ -7,10 +7,10 @@ public class FoodManager : MonoBehaviour
 {
     [SerializeField] private Camera cam;
     [SerializeField] private Food[] foodPrefabList;
-    public int FoodsOnScreen { get; set; } = 0;
+    private int foodsOnScreen = 0;
 
     [Range(1, 10)]
-    [SerializeField] private int maxFoodAmount = 1;
+    [SerializeField] private int maxFoodAmount;
     private Food currentFood;
 
     #region Singleton
@@ -24,12 +24,16 @@ public class FoodManager : MonoBehaviour
 
     #endregion
 
-    // Start is called before the first frame update
+    public int FoodsOnScreen
+    {
+        get { return foodsOnScreen; }
+        set { foodsOnScreen = value; }
+    }
+
     void Start()
     {
         currentFood = foodPrefabList[0];
     }
-
 
     void Update()
     {
@@ -39,7 +43,7 @@ public class FoodManager : MonoBehaviour
             {
                 Vector3 position = cam.ScreenToWorldPoint(Input.mousePosition);
                 position.z = 0;
-                GameObject foodSpawned = ObjectPooler.instance.SpawnFromPool(currentFood.name, position, currentFood.transform.rotation);
+                ObjectPooler.instance.SpawnFromPool(currentFood.name, position, currentFood.transform.rotation);
             }
         }
     }

@@ -8,8 +8,6 @@ public abstract class Fish : MonoBehaviour
     [SerializeField] private string food; // give each fish a way to set the food from a prefab somehow, using IEdible type
 
     private Hunger hunger;
-    
-
     // Start is called before the first frame update
     void Start()
     {
