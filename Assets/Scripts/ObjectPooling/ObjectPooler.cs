@@ -6,6 +6,7 @@ public class ObjectPooler : MonoBehaviour
 {
     [SerializeField] private List<Pool> pools;
     [SerializeField] private Dictionary<string, Queue<GameObject>> poolDictonary;
+    [SerializeField] private Dictionary<string, List<GameObject>> activePoolDictonary;
 
     #region Singleton
 
@@ -17,16 +18,17 @@ public class ObjectPooler : MonoBehaviour
     }
 
     #endregion
-
-
-    // Start is called before the first frame update
+    
     void Start()
     {
         poolDictonary = new Dictionary<string, Queue<GameObject>>();
+        activePoolDictonary = new Dictionary<string, List<GameObject>>();
 
         foreach (Pool pool in pools)
         {
             Queue<GameObject> objectPool = new Queue<GameObject>();
+            List<GameObject> activeObjectPool = new List<GameObject>();
+
             GameObject poolParentObj = new GameObject(pool.PoolTag);
             poolParentObj.transform.parent = gameObject.transform;
 
@@ -38,6 +40,7 @@ public class ObjectPooler : MonoBehaviour
             }
 
             poolDictonary.Add(pool.PoolTag, objectPool);
+            activePoolDictonary.Add(pool.PoolTag, activeObjectPool);
         }
     }
 
@@ -50,10 +53,12 @@ public class ObjectPooler : MonoBehaviour
         }
 
         GameObject objectToSpawn = poolDictonary[tag].Dequeue();
+
         objectToSpawn.SetActive(true);
         objectToSpawn.transform.position = position;
         objectToSpawn.transform.rotation = rotation;
 
+        activePoolDictonary[tag].Add(objectToSpawn);
         poolDictonary[tag].Enqueue(objectToSpawn);
 
         return objectToSpawn;
@@ -68,10 +73,26 @@ public class ObjectPooler : MonoBehaviour
         }
 
         GameObject objectToSpawn = poolDictonary[tag].Dequeue();
+
         objectToSpawn.SetActive(true);
+        activePoolDictonary[tag].Add(objectToSpawn);
 
         poolDictonary[tag].Enqueue(objectToSpawn);
 
         return objectToSpawn;
+    }
+
+    public void SetObjectInactive(GameObject obj)
+    {
+        obj.SetActive(false);
+        activePoolDictonary[obj.transform.parent.name].Remove(obj);
+    }
+
+    public Dictionary<string, List<GameObject>> ActivePoolDictonary
+    {
+        get
+        {
+            return activePoolDictonary;
+        }
     }
 }
