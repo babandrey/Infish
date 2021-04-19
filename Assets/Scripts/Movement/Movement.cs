@@ -12,9 +12,6 @@ public class Movement : MonoBehaviour
     private Hunger hunger;
     private Animator animator;
 
-    Transform foodObjectPool;
-    private bool isChasingFood = false;
-
     private float timeLeft; //the time left to switch to a new random vector
 
     private float minRandomX;
@@ -22,12 +19,14 @@ public class Movement : MonoBehaviour
     private float minRandomY;
     private float maxRandomY;
 
-    private float moveToX;
-    private float moveToY;
-    private Vector2 moveTo = new Vector2(1f, 0f); // always face on the right side first
+    private float directionX;
+    private float directionY;
+    private Vector2 direction = new Vector2(1f, 0f); // always face on the right side first
 
     [Range(0.0f, 10f)]
-    [SerializeField] private float speed = 1f;
+    [SerializeField] private float speed;
+    [Range(0.0f, 10f)]
+    [SerializeField] private float hungrySpeed;
 
     private void Awake()
     {
@@ -53,23 +52,11 @@ public class Movement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (isChasingFood)
-        {
-            // some other way of moving cuz translate while using non-normalized vector is kinda poopy
-        }
-        else
-        {
-            transform.Translate(moveTo * speed * Time.deltaTime, Space.World);
-        }
+        transform.Translate(direction * speed * Time.deltaTime, Space.World);
     }
 
     private void MoveIdle()
     {
-        if (isChasingFood)
-        {
-            isChasingFood = false;
-        }
-
         timeLeft -= Time.deltaTime;
         if (timeLeft <= 0)
         {
@@ -96,42 +83,43 @@ public class Movement : MonoBehaviour
                 maxRandomY = 0f;
             }
 
-            moveToX = Random.Range(minRandomX, maxRandomX);
-            moveToY = Random.Range(minRandomY, maxRandomY);
+            directionX = Random.Range(minRandomX, maxRandomX);
+            directionY = Random.Range(minRandomY, maxRandomY);
 
-            if (moveToX > 0f && moveTo.x < 0f)
+            if (directionX > 0f && direction.x < 0f)
             {
                 animator.SetTrigger("turnRight");
             }
-            else if (moveToX < 0f && moveTo.x > 0f)
+            else if (directionX < 0f && direction.x > 0f)
             {
                 animator.SetTrigger("turnLeft");
             }
 
-            moveTo = new Vector2(moveToX, moveToY);
+            direction = new Vector2(directionX, directionY);
             timeLeft += Random.Range(1f, 5f);
+            speed = Random.Range(1f, 3f);
         }
     }
 
     private void ChaseFood()
     {
-        if (!isChasingFood)
+        if(speed != hungrySpeed)
         {
-            isChasingFood = true;
+            speed = hungrySpeed;
         }
 
         GameObject foodToChase = ReturnClosestFood();
 
-        if(foodToChase.transform.position.x > 0f && moveTo.x < 0f)
+        if(foodToChase.transform.position.x > 0f && direction.x < 0f)
         {
             animator.SetTrigger("turnRight");
         }
-        else if(foodToChase.transform.position.x < 0f && moveTo.x > 0f)
+        else if(foodToChase.transform.position.x < 0f && direction.x > 0f)
         {
             animator.SetTrigger("turnLeft");
         }
 
-        moveTo = foodToChase.transform.position;
+        direction = (foodToChase.transform.position - transform.position).normalized;
     }
 
     private GameObject ReturnClosestFood()

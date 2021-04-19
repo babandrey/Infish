@@ -238,6 +238,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  hungrySpeed: 3
 --- !u!114 &114689332038343048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -250,8 +251,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf8ba874f43e68e4f93ed3d8d31d55c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hungerTimer: 30
-  hungerStartValue: 15
+  hungerTimer: 20
+  hungerStartValue: 10
   hungryColorStartTime: 5
   isHungry: 0
   spriteRenderer: {fileID: 7486072874299557657}
