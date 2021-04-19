@@ -203,7 +203,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d880c7d58b98574fae259ca5ba02f00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  foodName: Fries
+  name: Fries
   health: 30
 --- !u!114 &7649062657003637792
 MonoBehaviour:

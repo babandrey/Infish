@@ -11,7 +11,6 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject buyButtonPrefab;
 
     private Transform buttonGrid;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -22,13 +21,9 @@ public class UIManager : MonoBehaviour
             GameObject button = Instantiate(buyButtonPrefab, buttonGrid);
             button.name = $"{prefab.name} Button";
             button.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = $"{prefab.name} Text";
-            button.GetComponent<Button>().onClick.AddListener(() => spawnManager.SpawnFish(prefab.name));
-        }
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+            //check on different condition based on what object it is, what addlistener method to add
+            button.GetComponent<Button>().onClick.AddListener(() => ObjectPooler.instance.SpawnFromPool(prefab.name));
+        }
     }
 }

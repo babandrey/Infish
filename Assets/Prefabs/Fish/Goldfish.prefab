@@ -265,6 +265,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hungerTimer: 30
   hungerStartValue: 15
+  hungryColorStartTime: 5
   isHungry: 0
   spriteRenderer: {fileID: 7486072874299557657}
   hungryColor: {r: 0, g: 1, b: 0.1816504, a: 1}
@@ -280,3 +281,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4fd6c23829a7244984852c937817c8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  name: Goldfish
+  food: Fries
