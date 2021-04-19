@@ -13,7 +13,7 @@ public class Movement : MonoBehaviour
     private Animator animator;
 
     Transform foodObjectPool;
-    private bool isChasingFood;
+    private bool isChasingFood = false;
 
     private float timeLeft; //the time left to switch to a new random vector
 
@@ -53,11 +53,23 @@ public class Movement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        transform.Translate(moveTo * speed * Time.deltaTime, Space.World);
+        if (isChasingFood)
+        {
+            // some other way of moving cuz translate while using non-normalized vector is kinda poopy
+        }
+        else
+        {
+            transform.Translate(moveTo * speed * Time.deltaTime, Space.World);
+        }
     }
 
     private void MoveIdle()
     {
+        if (isChasingFood)
+        {
+            isChasingFood = false;
+        }
+
         timeLeft -= Time.deltaTime;
         if (timeLeft <= 0)
         {
@@ -103,7 +115,22 @@ public class Movement : MonoBehaviour
 
     private void ChaseFood()
     {
+        if (!isChasingFood)
+        {
+            isChasingFood = true;
+        }
+
         GameObject foodToChase = ReturnClosestFood();
+
+        if(foodToChase.transform.position.x > 0f && moveTo.x < 0f)
+        {
+            animator.SetTrigger("turnRight");
+        }
+        else if(foodToChase.transform.position.x < 0f && moveTo.x > 0f)
+        {
+            animator.SetTrigger("turnLeft");
+        }
+
         moveTo = foodToChase.transform.position;
     }
 
