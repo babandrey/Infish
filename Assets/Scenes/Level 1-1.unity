@@ -153,14 +153,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pools:
-  - poolTag: Fries
-    prefab: {fileID: 7654938001339126806, guid: 2fbd017bfbbbb5c4ca93dcab962b1ec0,
-      type: 3}
-    size: 10
   - poolTag: Goldfish
     prefab: {fileID: 7486072874299557660, guid: 228c90d8a5afc91468275178dab6e2d1,
       type: 3}
     size: 100
+  - poolTag: Fries
+    prefab: {fileID: 7654938001339126806, guid: 2fbd017bfbbbb5c4ca93dcab962b1ec0,
+      type: 3}
+    size: 10
 --- !u!4 &27464109
 Transform:
   m_ObjectHideFlags: 0

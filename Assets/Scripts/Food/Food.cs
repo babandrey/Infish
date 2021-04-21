@@ -10,20 +10,29 @@ public class Food : MonoBehaviour, IEdible
     private Sprite sprite;
     private IStatus[] statuses;
 
+    private ObjectPooler objectPooler;
+    private FoodManager foodManager;
+
+    private void Awake()
+    {
+        objectPooler = ObjectPooler.instance;
+        foodManager = FoodManager.instance;
+    }
+
     private void Start()
     {
         sprite = GetComponent<SpriteRenderer>().sprite;
-        statuses = GetComponents<IStatus>();
+        statuses = GetComponents<IStatus>(); 
     }
 
     private void OnEnable()
     {
-        FoodManager.instance.FoodsOnScreen++;
+        foodManager.FoodsOnScreen++;
     }
 
     private void OnDisable()
     {
-        FoodManager.instance.FoodsOnScreen--;
+        foodManager.FoodsOnScreen--;
     }
 
     public string Name
@@ -52,6 +61,6 @@ public class Food : MonoBehaviour, IEdible
     IEnumerator DespawnTimeout()
     {
         yield return new WaitForSeconds(1f);
-        gameObject.SetActive(false);
+        objectPooler.SetObjectInactive(gameObject);
     }
 }

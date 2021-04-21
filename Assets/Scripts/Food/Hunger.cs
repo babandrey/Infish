@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class Hunger : MonoBehaviour
 {
-    [SerializeField] private float hungerTimer = 30f; // lower over time, once gets to 0 the fish dies
-    [SerializeField] private float hungerStartValue = 15f;
-    [SerializeField] private float hungryColorStartTime = 5f; //after the fish becomes hungry
+    [SerializeField] private float hungerTimer; // lower over time, once gets to 0 the fish dies
+    [SerializeField] private float hungerStartValue;
+    [SerializeField] private float hungryColorStartTime; //after the fish becomes hungry
     [SerializeField] private bool isHungry = false;
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private Color hungryColor;

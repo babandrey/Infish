@@ -204,7 +204,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Fries
-  health: 30
+  health: 20
 --- !u!114 &7649062657003637792
 MonoBehaviour:
   m_ObjectHideFlags: 0

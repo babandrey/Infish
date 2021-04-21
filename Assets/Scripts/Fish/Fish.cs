@@ -7,14 +7,16 @@ public abstract class Fish : MonoBehaviour
     [SerializeField] private new string name;
     [SerializeField] private string food; // give each fish a way to set the food from a prefab somehow, using IEdible type
 
+    private ObjectPooler objectPooler;
     private Hunger hunger;
-    // Start is called before the first frame update
+
     void Start()
     {
+        objectPooler = ObjectPooler.instance;
+
         hunger = gameObject.GetComponent<Hunger>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         
@@ -23,6 +25,11 @@ public abstract class Fish : MonoBehaviour
     public string Name
     { 
         get { return name; }
+    }
+
+    public string Food
+    {
+        get { return food; }
     }
 
     public void CheckCollision(Collider2D collision)
@@ -55,6 +62,6 @@ public abstract class Fish : MonoBehaviour
 
         hunger.HungerTimer = food.Health;
 
-        obj.SetActive(false);
+        objectPooler.SetObjectInactive(obj);
     }
 }
