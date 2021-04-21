@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    private FoodManager foodManager;
     private ObjectPooler objectPooler;
     private List<GameObject> foodPool;
 
     private Fish fish;
     private Hunger hunger;
     private Animator animator;
+    private Transform fishMouth;
 
     private float timeLeft; //the time left to switch to a new random vector
 
@@ -34,8 +34,8 @@ public class Movement : MonoBehaviour
         hunger = GetComponent<Hunger>();
         animator = GetComponent<Animator>();
         
-        foodManager = FoodManager.instance;
         objectPooler = ObjectPooler.instance;
+        fishMouth = transform.Find("Fish Mouth");
     }
 
     // Update is called once per frame
@@ -110,16 +110,16 @@ public class Movement : MonoBehaviour
 
         GameObject foodToChase = ReturnClosestFood();
 
-        if(foodToChase.transform.position.x > 0f && direction.x < 0f)
+        if(direction.x < 0f && transform.rotation.eulerAngles.y == 180)
         {
             animator.SetTrigger("turnRight");
         }
-        else if(foodToChase.transform.position.x < 0f && direction.x > 0f)
+        else if(direction.x > 0f && transform.rotation.eulerAngles.y == 0)
         {
             animator.SetTrigger("turnLeft");
         }
 
-        direction = (foodToChase.transform.position - transform.position).normalized;
+        direction = (foodToChase.transform.position - fishMouth.position).normalized;
     }
 
     private GameObject ReturnClosestFood()
@@ -131,7 +131,7 @@ public class Movement : MonoBehaviour
 
         foreach (GameObject food in foodPool)
         {
-            float distance = Vector2.Distance(transform.position, food.transform.position);
+            float distance = Vector2.Distance(fishMouth.position, food.transform.position);
             if (closestFoodDistance > distance)
             {
                 closestFoodDistance = distance;
