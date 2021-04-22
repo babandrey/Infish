@@ -7,8 +7,7 @@ using TMPro;
 
 public class UIManager : MonoBehaviour
 {
-    [SerializeField] private SpawnManager spawnManager;
-    [SerializeField] private GameObject buyButtonPrefab;
+    [SerializeField] public GameObject[] prefabButtonArray;
 
     private Transform buttonGrid;
     // Start is called before the first frame update
@@ -16,14 +15,13 @@ public class UIManager : MonoBehaviour
     {
         buttonGrid = transform.Find("Button Grid");
 
-        foreach(GameObject prefab in spawnManager.prefabs.Values)
-        {
-            GameObject button = Instantiate(buyButtonPrefab, buttonGrid);
-            button.name = $"{prefab.name} Button";
-            button.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = $"{prefab.name} Text";
+        int i = 0;
 
-            //check on different condition based on what object it is, what addlistener method to add
-            button.GetComponent<Button>().onClick.AddListener(() => ObjectPooler.instance.SpawnFromPool(prefab.name));
+        foreach(GameObject prefab in prefabButtonArray)
+        {
+            GameObject button = Instantiate(prefabButtonArray[i], buttonGrid);
+
+            i++;
         }
     }
 }
