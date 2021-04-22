@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class Gold : MonoBehaviour, IGold
 {
-    public new string name;
-    public int amount;
-    public Sprite sprite;
+    [SerializeField] private new string name;
+    [SerializeField] private int amount;
+    private Sprite sprite;
+
+    void Awake()
+    {
+        sprite = GetComponent<SpriteRenderer>().sprite;
+    }
 
     public string Name
     {

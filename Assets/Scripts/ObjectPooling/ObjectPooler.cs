@@ -29,6 +29,8 @@ public class ObjectPooler : MonoBehaviour
             Queue<GameObject> objectPool = new Queue<GameObject>();
             List<GameObject> activeObjectPool = new List<GameObject>();
 
+            pool.PoolTag = pool.Prefab.name;
+
             GameObject poolParentObj = new GameObject(pool.PoolTag);
             poolParentObj.transform.parent = gameObject.transform;
 

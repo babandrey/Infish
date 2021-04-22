@@ -6,15 +6,16 @@ public class GoldManager : MonoBehaviour
 {
     private int goldAmount = 200;
 
-    void Start()
+    #region Singleton
+
+    public static GoldManager instance;
+
+    private void Awake()
     {
-        
+        instance = this;
     }
 
-    void Update()
-    {
-        
-    }
+    #endregion
 
     public int GoldAmount
     {
@@ -22,7 +23,7 @@ public class GoldManager : MonoBehaviour
         set { goldAmount = value; }
     }
 
-    public void ChangeGoldAmount(int amount) 
+    public void ChangeGoldAmount(int amount)
     {
         if(goldAmount - amount > 0)
         {
