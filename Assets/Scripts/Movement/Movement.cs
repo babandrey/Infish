@@ -14,14 +14,8 @@ public class Movement : MonoBehaviour
 
     private float timeLeft; //the time left to switch to a new random vector
 
-    private float minRandomX;
-    private float maxRandomX;
-    private float minRandomY;
-    private float maxRandomY;
-
-    private float directionX;
-    private float directionY;
-    private Vector2 direction = new Vector2(1f, 0f); // always face on the right side first
+    private bool isFacingRight = true;
+    private Vector2 direction;
 
     [Range(0.0f, 10f)]
     [SerializeField] private float speed;
@@ -41,7 +35,7 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(hunger.IsHungry && objectPooler.ActivePoolDictonary[fish.Food].Count != 0)
+        if(hunger.IsHungry && objectPooler.ActivePoolDictonary[fish.Food].Count > 0)
         {
             ChaseFood();
             return;
@@ -60,11 +54,12 @@ public class Movement : MonoBehaviour
         timeLeft -= Time.deltaTime;
         if (timeLeft <= 0)
         {
-            minRandomX = -1f;
-            maxRandomX = 1f;
-            minRandomY = -1f;
-            maxRandomY = 1f;
+            float minRandomX = -1f;
+            float maxRandomX = 1f;
+            float minRandomY = -1f;
+            float maxRandomY = 1f;
 
+            // Motivators to move away from the borders
             if (transform.position.x < -5)
             {
                 minRandomX = 0f;
@@ -83,22 +78,34 @@ public class Movement : MonoBehaviour
                 maxRandomY = 0f;
             }
 
-            directionX = Random.Range(minRandomX, maxRandomX);
-            directionY = Random.Range(minRandomY, maxRandomY);
+            float directionX = Random.Range(minRandomX, maxRandomX);
+            float directionY = Random.Range(minRandomY, maxRandomY);
 
-            if (directionX > 0f && direction.x < 0f)
+            if (directionX > 0f && !isFacingRight)
             {
-                animator.SetTrigger("turnRight");
+                TurnRight();
             }
-            else if (directionX < 0f && direction.x > 0f)
+            else if (directionX < 0f && isFacingRight)
             {
-                animator.SetTrigger("turnLeft");
+                TurnLeft();
             }
 
             direction = new Vector2(directionX, directionY);
             timeLeft += Random.Range(1f, 5f);
             speed = Random.Range(1f, 3f);
         }
+    }
+
+    private void TurnLeft()
+    {
+        animator.SetTrigger("turnLeft");
+        isFacingRight = false;
+    }
+
+    private void TurnRight()
+    {
+        animator.SetTrigger("turnRight");
+        isFacingRight = true;
     }
 
     private void ChaseFood()
@@ -110,16 +117,16 @@ public class Movement : MonoBehaviour
 
         GameObject foodToChase = ReturnClosestFood();
 
-        if(direction.x < 0f && transform.rotation.eulerAngles.y == 180)
-        {
-            animator.SetTrigger("turnRight");
-        }
-        else if(direction.x > 0f && transform.rotation.eulerAngles.y == 0)
-        {
-            animator.SetTrigger("turnLeft");
-        }
-
         direction = (foodToChase.transform.position - fishMouth.position).normalized;
+
+        if (direction.x < 0f && isFacingRight)
+        {
+            TurnLeft();
+        }
+        else if(direction.x > 0f && !isFacingRight)
+        {
+            TurnRight();
+        }
     }
 
     private GameObject ReturnClosestFood()
