@@ -10,16 +10,15 @@ public abstract class Fish : MonoBehaviour
     private ObjectPooler objectPooler;
     private Hunger hunger;
 
-    void Start()
+    private void Awake()
     {
         objectPooler = ObjectPooler.instance;
-
         hunger = gameObject.GetComponent<Hunger>();
     }
 
-    void Update()
+    void OnEnable()
     {
-        
+        hunger.HungerTimer = 20f;
     }
 
     public string Name

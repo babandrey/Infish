@@ -5,31 +5,23 @@ using UnityEngine;
 [System.Serializable]
 public class Pool
 {
-    [SerializeField] private string poolTag;
+    private string poolTag;
     [SerializeField] private GameObject prefab;
     [SerializeField] private int size;
 
     public string PoolTag
     {
-        get
-        {
-            return poolTag;
-        }
+        get { return poolTag; }
+        set { poolTag = value; }
     }
 
     public GameObject Prefab
     {
-        get
-        {
-            return prefab;
-        }
+        get { return prefab; }
     }
 
     public int Size
     {
-        get
-        {
-            return size;
-        }
+        get {return size; }
     }
 }
