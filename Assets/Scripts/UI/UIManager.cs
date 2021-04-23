@@ -15,13 +15,9 @@ public class UIManager : MonoBehaviour
     {
         buttonGrid = transform.Find("Button Grid");
 
-        int i = 0;
-
         foreach(GameObject prefab in prefabButtonArray)
         {
-            GameObject button = Instantiate(prefabButtonArray[i], buttonGrid);
-
-            i++;
+            GameObject button = Instantiate(prefab, buttonGrid);
         }
     }
 }

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8802258219912021516}
   - component: {fileID: 8802258219912021517}
   - component: {fileID: 8802258219912021506}
-  - component: {fileID: -5260677303855178515}
+  - component: {fileID: -5965103436708468070}
   m_Layer: 5
   m_Name: Buy Fish Button
   m_TagString: Untagged
@@ -122,7 +122,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: -5260677303855178515}
+      - m_Target: {fileID: -5965103436708468070}
         m_TargetAssemblyTypeName: BuyButtonMethods, Assembly-CSharp
         m_MethodName: SpawnFish
         m_Mode: 5
@@ -134,7 +134,7 @@ MonoBehaviour:
           m_StringArgument: Goldfish
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &-5260677303855178515
+--- !u!114 &-5965103436708468070
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
