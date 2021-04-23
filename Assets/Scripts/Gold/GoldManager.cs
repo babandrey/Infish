@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GoldManager : MonoBehaviour
 {
-    private int goldAmount = 200;
+    [SerializeField] private int goldAmount = 200;
 
     #region Singleton
 

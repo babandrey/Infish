@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class ObjectPooler : MonoBehaviour
@@ -36,7 +37,7 @@ public class ObjectPooler : MonoBehaviour
 
             for (int i = 0; i < pool.Size; i++)
             {
-                GameObject obj = Instantiate(pool.Prefab, poolParentObj.transform); // trying to  creating object groups for different types of stuff like fish, food or coins.
+                GameObject obj = Instantiate(pool.Prefab, poolParentObj.transform);
                 obj.SetActive(false);
                 objectPool.Enqueue(obj);
             }
@@ -48,20 +49,10 @@ public class ObjectPooler : MonoBehaviour
 
     public GameObject SpawnFromPool(string tag, Vector3 position, Quaternion rotation)
     {
-        if (!poolDictonary.ContainsKey(tag))
-        {
-            Debug.LogWarning($"Pool with tag {tag} doesn't exist.");
-            return null;
-        }
+        GameObject objectToSpawn = SpawnFromPool(tag);
 
-        GameObject objectToSpawn = poolDictonary[tag].Dequeue();
-
-        objectToSpawn.SetActive(true);
         objectToSpawn.transform.position = position;
         objectToSpawn.transform.rotation = rotation;
-
-        activePoolDictonary[tag].Add(objectToSpawn);
-        poolDictonary[tag].Enqueue(objectToSpawn);
 
         return objectToSpawn;
     }
@@ -74,12 +65,19 @@ public class ObjectPooler : MonoBehaviour
             return null;
         }
 
-        GameObject objectToSpawn = poolDictonary[tag].Dequeue();
+        GameObject objectToSpawn;
 
-        objectToSpawn.SetActive(true);
+        if (poolDictonary[tag].Count > 0)
+        {
+            objectToSpawn = poolDictonary[tag].Dequeue();
+            objectToSpawn.SetActive(true);
+        }
+        else
+        {
+            objectToSpawn = Instantiate(pools.Find(pool => pool.PoolTag == tag).Prefab, GameObject.Find(tag).transform);
+        }
+
         activePoolDictonary[tag].Add(objectToSpawn);
-
-        poolDictonary[tag].Enqueue(objectToSpawn);
 
         return objectToSpawn;
     }
@@ -88,6 +86,7 @@ public class ObjectPooler : MonoBehaviour
     {
         obj.SetActive(false);
         activePoolDictonary[obj.transform.parent.name].Remove(obj);
+        poolDictonary[obj.transform.parent.name].Enqueue(obj);
     }
 
     public Dictionary<string, List<GameObject>> ActivePoolDictonary

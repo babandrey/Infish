@@ -36,7 +36,7 @@ public class Hunger : MonoBehaviour
         }
         else if (hungerTimer <= 0)
         {
-            gameObject.SetActive(false);
+            ObjectPooler.instance.SetObjectInactive(gameObject);
         }
     }
 
