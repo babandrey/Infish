@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8802258219912021516}
   - component: {fileID: 8802258219912021517}
   - component: {fileID: 8802258219912021506}
-  - component: {fileID: -5965103436708468070}
+  - component: {fileID: -4958488125297821932}
   m_Layer: 5
   m_Name: Buy Fish Button
   m_TagString: Untagged
@@ -122,19 +122,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: -5965103436708468070}
-        m_TargetAssemblyTypeName: BuyButtonMethods, Assembly-CSharp
-        m_MethodName: SpawnFish
-        m_Mode: 5
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.Object, UnityEngine
+        m_MethodName: 
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Goldfish
+          m_StringArgument: BuyButtonMethods.SpawnFish
           m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &-5965103436708468070
+        m_CallState: 0
+--- !u!114 &-4958488125297821932
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,9 +143,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 8802258219912021504}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c8fd52e052c7fe4788fb76f0a6a98ed, type: 3}
+  m_Script: {fileID: 11500000, guid: 7d1f551b9046ac04c9737b6090183f49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnClickFunctionName: SpawnFish
+  parameters:
+  - Goldfish
 --- !u!1 &8802258219964362595
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,30 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BuyButtonMethods : MonoBehaviour
+public static class BuyButtonMethods
 {
-    public void SpawnFish(string tag)
+    public static void SpawnFish(string tag)
     {
         ObjectPooler.instance.SpawnFromPool(tag);
         GoldManager.instance.ChangeGoldAmount(-100);
     }
 
-    public void UpgradeFood()
+    public static void UpgradeFood()
     {
 
     }
 
-    public void IncreaseFoodAmount()
+    public static void IncreaseFoodAmount()
     {
 
     }
 
-    public void UpgradeWeapon()
+    public static void UpgradeWeapon()
     {
 
     }
 
-    public void BuyEgg()
+    public static void BuyEgg()
     {
 
     }
