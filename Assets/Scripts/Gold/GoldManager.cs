@@ -23,11 +23,16 @@ public class GoldManager : MonoBehaviour
         set { goldAmount = value; }
     }
 
-    public void ChangeGoldAmount(int amount)
+    public void AddGold(int amount)
     {
-        if(goldAmount - amount > 0)
+        goldAmount += amount;
+    }
+
+    public void DecreaseGold(int amount)
+    {
+        if (goldAmount - amount > 0)
         {
-            goldAmount += amount;
+            goldAmount -= amount;
         }
     }
 }
