@@ -5,7 +5,7 @@ using UnityEngine;
 public abstract class Fish : MonoBehaviour
 {
     [SerializeField] private new string name;
-    [SerializeField] private GameObject food; // give each fish a way to set the food from a prefab somehow, using IEdible type
+    [SerializeField] private GameObject food;
 
     private ObjectPooler objectPooler;
     private Hunger hunger;
@@ -14,6 +14,11 @@ public abstract class Fish : MonoBehaviour
     {
         objectPooler = ObjectPooler.instance;
         hunger = gameObject.GetComponent<Hunger>();
+
+        if(food.GetComponent<IEdible>() == null)
+        {
+            Debug.LogWarning($"The {food} on {gameObject} isn't IEdible.");
+        }
     }
 
     void OnEnable()
