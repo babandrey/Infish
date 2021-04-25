@@ -36,7 +36,7 @@ public class FoodManager : MonoBehaviour
         get { return maxFoodAmount; }
         set 
         {
-            if(maxFoodAmount <= 10)
+            if(maxFoodAmount < 10)
             {
                 maxFoodAmount = value;
             } 

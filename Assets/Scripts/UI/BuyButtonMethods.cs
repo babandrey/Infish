@@ -7,7 +7,6 @@ public static class BuyButtonMethods
     public static void SpawnFish(string tag)
     {
         ObjectPooler.instance.SpawnFromPool(tag);
-        GoldManager.instance.ChangeGoldAmount(-100);
     }
 
     public static void UpgradeFood()
