@@ -643,7 +643,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabButtonArray:
   - {fileID: 8802258219912021504, guid: 856eb5192a1ea7643bb537b2ad258168, type: 3}
-  - {fileID: 8802258219912021504, guid: 856eb5192a1ea7643bb537b2ad258168, type: 3}
+  - {fileID: 8455472233298048772, guid: 906ac1baccc1dae42867ade33c720f60, type: 3}
+  - {fileID: 6277400908973082584, guid: b85e7b1226e12a54485cd260759e626a, type: 3}
 --- !u!1 &1038073728
 GameObject:
   m_ObjectHideFlags: 0
@@ -844,7 +845,7 @@ MonoBehaviour:
   cam: {fileID: 519420031}
   foodPrefabList:
   - {fileID: 8951337372736556834, guid: 2fbd017bfbbbb5c4ca93dcab962b1ec0, type: 3}
-  maxFoodAmount: 5
+  maxFoodAmount: 1
 --- !u!4 &1824306563
 Transform:
   m_ObjectHideFlags: 0
