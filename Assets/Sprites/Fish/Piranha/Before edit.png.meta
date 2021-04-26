@@ -1,0 +1,588 @@
+fileFormatVersion: 2
+guid: 375b339b933d3e84199216e4016c42f6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6967439637391905941
+    second: Mobile - Shantae Riskys Revenge - Biter Fish_0
+  - first:
+      213: -5549434663865003786
+    second: Mobile - Shantae Riskys Revenge - Biter Fish_1
+  - first:
+      213: -1851502258519804428
+    second: Mobile - Shantae Riskys Revenge - Biter Fish_2
+  - first:
+      213: 1188081173041139052
+    second: Mobile - Shantae Riskys Revenge - Biter Fish_3
+  - first:
+      213: -3811262516441577699
+    second: Mobile - Shantae Riskys Revenge - Biter Fish_4
+  - first:
+      213: -7671774748591433803
+    second: Mobile - Shantae Riskys Revenge - Biter Fish_5
+  - first:
+      213: -9183936620428438656
+    second: Mobile - Shantae Riskys Revenge - Biter Fish_6
+  - first:
+      213: -809405394798299558
+    second: Mobile - Shantae Riskys Revenge - Biter Fish_7
+  - first:
+      213: -6764866799254121350
+    second: Mobile - Shantae Riskys Revenge - Biter Fish_8
+  - first:
+      213: -758632179793099372
+    second: Mobile - Shantae Riskys Revenge - Biter Fish_9
+  - first:
+      213: -5227672865430266198
+    second: Mobile - Shantae Riskys Revenge - Biter Fish_11
+  - first:
+      213: -1184237612948853078
+    second: Mobile - Shantae Riskys Revenge - Biter Fish_12
+  - first:
+      213: 1733919642001700440
+    second: Mobile - Shantae Riskys Revenge - Biter Fish_18
+  - first:
+      213: -7465021556350120674
+    second: Mobile - Shantae Riskys Revenge - Biter Fish_19
+  - first:
+      213: 828487330153190354
+    second: Mobile - Shantae Riskys Revenge - Biter Fish_20
+  - first:
+      213: -2064958175813276425
+    second: Mobile - Shantae Riskys Revenge - Biter Fish_21
+  - first:
+      213: 90225723629331819
+    second: Mobile - Shantae Riskys Revenge - Biter Fish_22
+  - first:
+      213: -8269436803037763532
+    second: Mobile - Shantae Riskys Revenge - Biter Fish_23
+  - first:
+      213: -2094910187225459826
+    second: Mobile - Shantae Riskys Revenge - Biter Fish_25
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Mobile - Shantae Riskys Revenge - Biter Fish_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 108
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59498b46f6151b060800000000000000
+      internalID: 6967439637391905941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Shantae Riskys Revenge - Biter Fish_1
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 108
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f0561c43927cf2b0800000000000000
+      internalID: -5549434663865003786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Shantae Riskys Revenge - Biter Fish_2
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 108
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f5f71c61842e46e0800000000000000
+      internalID: -1851502258519804428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Shantae Riskys Revenge - Biter Fish_3
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 108
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6d427b3889ec7010800000000000000
+      internalID: 1188081173041139052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Shantae Riskys Revenge - Biter Fish_4
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 108
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d170db92fecab1bc0800000000000000
+      internalID: -3811262516441577699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Shantae Riskys Revenge - Biter Fish_5
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 108
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b755615381688590800000000000000
+      internalID: -7671774748591433803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Shantae Riskys Revenge - Biter Fish_6
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 108
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08359a36d4a1c8080800000000000000
+      internalID: -9183936620428438656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Shantae Riskys Revenge - Biter Fish_7
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 108
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5633c3f41a64c4f0800000000000000
+      internalID: -809405394798299558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Shantae Riskys Revenge - Biter Fish_8
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 108
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a74df95ec7d5e12a0800000000000000
+      internalID: -6764866799254121350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Shantae Riskys Revenge - Biter Fish_9
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 108
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49580484d0cc875f0800000000000000
+      internalID: -758632179793099372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Shantae Riskys Revenge - Biter Fish_11
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 108
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aae941ee9339377b0800000000000000
+      internalID: -5227672865430266198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Shantae Riskys Revenge - Biter Fish_12
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 108
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaee6865a2eb09fe0800000000000000
+      internalID: -1184237612948853078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Shantae Riskys Revenge - Biter Fish_18
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 67
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 856759a4abe101810800000000000000
+      internalID: 1733919642001700440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Shantae Riskys Revenge - Biter Fish_19
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 67
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1d0e15227ae66890800000000000000
+      internalID: -7465021556350120674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Shantae Riskys Revenge - Biter Fish_20
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 67
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d351b656d06f7b00800000000000000
+      internalID: 828487330153190354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Shantae Riskys Revenge - Biter Fish_21
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 67
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fc6c9eca7bc753e0800000000000000
+      internalID: -2064958175813276425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Shantae Riskys Revenge - Biter Fish_22
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 67
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b65678e41db804100800000000000000
+      internalID: 90225723629331819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Shantae Riskys Revenge - Biter Fish_23
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 67
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 438646e7a0f0d3d80800000000000000
+      internalID: -8269436803037763532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Shantae Riskys Revenge - Biter Fish_25
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 67
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e835416b8426de2e0800000000000000
+      internalID: -2094910187225459826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
