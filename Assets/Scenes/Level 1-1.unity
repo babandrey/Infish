@@ -872,6 +872,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Piranha
       objectReference: {fileID: 0}
+    - target: {fileID: 2824235091865938180, guid: e938715e20af24a4abb4af0185cb6ccc,
+        type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2824235091865938181, guid: e938715e20af24a4abb4af0185cb6ccc,
         type: 3}
       propertyPath: m_RootOrder
@@ -895,7 +900,7 @@ PrefabInstance:
     - target: {fileID: 2824235091865938181, guid: e938715e20af24a4abb4af0185cb6ccc,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2824235091865938181, guid: e938715e20af24a4abb4af0185cb6ccc,
         type: 3}
@@ -905,7 +910,7 @@ PrefabInstance:
     - target: {fileID: 2824235091865938181, guid: e938715e20af24a4abb4af0185cb6ccc,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2824235091865938181, guid: e938715e20af24a4abb4af0185cb6ccc,
         type: 3}
@@ -920,7 +925,7 @@ PrefabInstance:
     - target: {fileID: 2824235091865938181, guid: e938715e20af24a4abb4af0185cb6ccc,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2824235091865938181, guid: e938715e20af24a4abb4af0185cb6ccc,
         type: 3}

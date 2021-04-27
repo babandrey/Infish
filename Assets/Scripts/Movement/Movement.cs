@@ -28,8 +28,12 @@ public class Movement : MonoBehaviour
         hunger = GetComponent<Hunger>();
         animator = GetComponent<Animator>();
         
-        objectPooler = ObjectPooler.instance;
         fishMouth = transform.Find("Fish Mouth");
+    }
+
+    private void Start()
+    {
+        objectPooler = ObjectPooler.instance;
     }
 
     // Update is called once per frame
