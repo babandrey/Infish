@@ -149,6 +149,7 @@ MonoBehaviour:
   OnClickFunctionName: SpawnFish
   parameters:
   - Goldfish
+  - 100
 --- !u!1 &8802258219964362595
 GameObject:
   m_ObjectHideFlags: 0

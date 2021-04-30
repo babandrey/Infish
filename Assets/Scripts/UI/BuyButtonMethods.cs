@@ -1,12 +1,13 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public static class BuyButtonMethods
 {
-    public static void SpawnFish(string tag)
+    public static void SpawnFish(string tag, string goldAmount)
     {
-        int amount = 100;
+        int amount = int.Parse(goldAmount);
 
         if(GoldManager.instance.GoldAmount >= amount)
         {

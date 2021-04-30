@@ -149,6 +149,7 @@ MonoBehaviour:
   OnClickFunctionName: SpawnFish
   parameters:
   - Piranha
+  - 1000
 --- !u!1 &5472800467724542135
 GameObject:
   m_ObjectHideFlags: 0
