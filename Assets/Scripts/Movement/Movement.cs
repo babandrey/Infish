@@ -14,7 +14,7 @@ public class Movement : MonoBehaviour
 
     private float timeLeft; //the time left to switch to a new random vector
 
-    private bool isFacingRight = true;
+    [SerializeField] private bool isFacingRight;
     private Vector2 direction;
 
     [Range(0.0f, 10f)]

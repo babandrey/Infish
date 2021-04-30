@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4703087137172001293}
   - component: {fileID: 4703191849167271829}
   - component: {fileID: 3312435606108972656}
-  m_Layer: 11
+  m_Layer: 9
   m_Name: Piranha
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78,13 +78,13 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2691104560475615763, guid: 6998a02b5df01ad48896654519eeb230,
+  m_Sprite: {fileID: 8410458493300486514, guid: 9e2a853097147874badbcc96df25a262,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.9375, y: 0.96875}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -129,7 +129,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1, y: 1}
-    newSize: {x: 0.9375, y: 0.96875}
+    newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -147,7 +147,7 @@ Animator:
   m_GameObject: {fileID: 2824235091865938177}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 324349aa6653a4741af7b4c26de7d60b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -168,6 +168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38c66e30a16498940a052ada03389ac7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFacingRight: 1
   speed: 1
   hungrySpeed: 3
 --- !u!114 &4703191849167271829
@@ -182,9 +183,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf8ba874f43e68e4f93ed3d8d31d55c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hungerTimer: 20
-  hungerStartValue: 10
-  hungryColorStartTime: 5
+  hungerTimer: 25
+  hungerStartValue: 15
+  hungryColorStartTime: 7
   isHungry: 0
   spriteRenderer: {fileID: 2824235091865938180}
   hungryColor: {r: 0, g: 1, b: 0.1816504, a: 1}
@@ -213,7 +214,7 @@ GameObject:
   - component: {fileID: 4186130428553438427}
   - component: {fileID: 6113061620035095238}
   - component: {fileID: 7755975603334671776}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Fish Mouth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
