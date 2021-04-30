@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GoldManager : MonoBehaviour
 {
-    [SerializeField] private int goldAmount = 200;
+    [SerializeField] private int goldAmount;
 
     #region Singleton
 
@@ -30,9 +30,6 @@ public class GoldManager : MonoBehaviour
 
     public void DecreaseGold(int amount)
     {
-        if (goldAmount - amount > 0)
-        {
-            goldAmount -= amount;
-        }
+        goldAmount = goldAmount - amount >= 0 ? goldAmount - amount : goldAmount;
     }
 }

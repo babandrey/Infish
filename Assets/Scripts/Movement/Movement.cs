@@ -14,7 +14,7 @@ public class Movement : MonoBehaviour
 
     private float timeLeft; //the time left to switch to a new random vector
 
-    private bool isFacingRight = true;
+    [SerializeField] private bool isFacingRight;
     private Vector2 direction;
 
     [Range(0.0f, 10f)]
@@ -28,8 +28,12 @@ public class Movement : MonoBehaviour
         hunger = GetComponent<Hunger>();
         animator = GetComponent<Animator>();
         
-        objectPooler = ObjectPooler.instance;
         fishMouth = transform.Find("Fish Mouth");
+    }
+
+    private void Start()
+    {
+        objectPooler = ObjectPooler.instance;
     }
 
     // Update is called once per frame
