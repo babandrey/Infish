@@ -32,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 2824235091865938177}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 4186130428553438427}
   m_Father: {fileID: 0}
@@ -203,6 +203,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Piranha
   food: {fileID: 7486072874299557660, guid: 228c90d8a5afc91468275178dab6e2d1, type: 3}
+  goldDrop: {fileID: 4908096888708736211, guid: ddb88ba1a373d3e41914ac75ee59bb05,
+    type: 3}
 --- !u!1 &5955241281744047835
 GameObject:
   m_ObjectHideFlags: 0

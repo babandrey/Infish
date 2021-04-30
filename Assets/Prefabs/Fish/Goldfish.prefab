@@ -86,6 +86,7 @@ GameObject:
   - component: {fileID: 114513666964208656}
   - component: {fileID: 114689332038343048}
   - component: {fileID: 1707798489157371929}
+  - component: {fileID: 395103986384517469}
   m_Layer: 9
   m_Name: Goldfish
   m_TagString: Untagged
@@ -272,4 +273,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Goldfish
   food: {fileID: 7654938001339126806, guid: 2fbd017bfbbbb5c4ca93dcab962b1ec0, type: 3}
+  goldDrop: {fileID: 4908096888708736211, guid: ddb88ba1a373d3e41914ac75ee59bb05,
+    type: 3}
   health: 30
+--- !u!114 &395103986384517469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7486072874299557660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cfaa53b3c76a5e4785036aa8312d0df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 0
+  timeUntilDrop: 5

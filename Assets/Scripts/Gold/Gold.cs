@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Gold : MonoBehaviour, IGold
 {
+    ObjectPooler objectPooler;
+
     [SerializeField] private new string name;
     [SerializeField] private int amount;
     private Sprite sprite;
@@ -11,6 +13,11 @@ public class Gold : MonoBehaviour, IGold
     void Awake()
     {
         sprite = GetComponent<SpriteRenderer>().sprite;
+    }
+
+    void Start()
+    {
+        objectPooler = ObjectPooler.instance;
     }
 
     public string Name
@@ -26,5 +33,19 @@ public class Gold : MonoBehaviour, IGold
     public Sprite Sprite
     {
         get { return sprite; }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.name == "Bottom Collider")
+        {
+            StartCoroutine(DespawnTimeout());
+        }
+    }
+
+    IEnumerator DespawnTimeout()
+    {
+        yield return new WaitForSeconds(1f);
+        objectPooler.SetObjectInactive(gameObject);
     }
 }
