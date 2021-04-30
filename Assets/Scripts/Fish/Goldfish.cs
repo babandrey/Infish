@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Goldfish : Fish, IEdible
 {
-    private float health;
+    [SerializeField] private float health;
     private IStatus[] statuses = new IStatus[0];
 
     public float Health

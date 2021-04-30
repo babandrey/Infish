@@ -272,3 +272,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Goldfish
   food: {fileID: 7654938001339126806, guid: 2fbd017bfbbbb5c4ca93dcab962b1ec0, type: 3}
+  health: 30
