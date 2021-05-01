@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 4703087137172001293}
   - component: {fileID: 4703191849167271829}
   - component: {fileID: 3312435606108972656}
+  - component: {fileID: 6725192848295892318}
   m_Layer: 9
   m_Name: Piranha
   m_TagString: Untagged
@@ -203,8 +204,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Piranha
   food: {fileID: 7486072874299557660, guid: 228c90d8a5afc91468275178dab6e2d1, type: 3}
-  goldDrop: {fileID: 4908096888708736211, guid: ddb88ba1a373d3e41914ac75ee59bb05,
+  goldDrop: {fileID: 8315868128928003939, guid: 5c470609add831f4f9c42a3c42b645b1,
     type: 3}
+--- !u!114 &6725192848295892318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2824235091865938177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cfaa53b3c76a5e4785036aa8312d0df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeUntilDrop: 15
 --- !u!1 &5955241281744047835
 GameObject:
   m_ObjectHideFlags: 0

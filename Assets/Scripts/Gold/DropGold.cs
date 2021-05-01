@@ -7,7 +7,7 @@ public class DropGold : MonoBehaviour
     private ObjectPooler objectPooler;
 
     private Fish fish;
-    [SerializeField] private float timer;
+    private float timer;
     [SerializeField] private float timeUntilDrop;
 
     void Start()
@@ -15,7 +15,7 @@ public class DropGold : MonoBehaviour
         objectPooler = ObjectPooler.instance;
 
         fish = GetComponent<Fish>();
-        timer = timeUntilDrop;
+        timer = RandomizeTimer();
     }
 
     void Update()
@@ -25,12 +25,17 @@ public class DropGold : MonoBehaviour
         if(timer <= 0)
         {
             SpawnGoldDrop();
-            timer = timeUntilDrop;
+            timer = RandomizeTimer();
         }
     }
 
     private void SpawnGoldDrop()
     {
         objectPooler.SpawnFromPool(fish.GoldDrop.name, fish.transform.position, fish.transform.rotation);
+    }
+
+    private float RandomizeTimer()
+    {
+        return Random.Range(timeUntilDrop - 2, timeUntilDrop + 2);
     }
 }
