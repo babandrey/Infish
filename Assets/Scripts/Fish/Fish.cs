@@ -6,6 +6,7 @@ public abstract class Fish : MonoBehaviour
 {
     [SerializeField] private new string name;
     [SerializeField] private GameObject food;
+    [SerializeField] private GameObject goldDrop;
 
     private ObjectPooler objectPooler;
     private Hunger hunger;
@@ -18,6 +19,11 @@ public abstract class Fish : MonoBehaviour
         if(food.GetComponent<IEdible>() == null)
         {
             Debug.LogWarning($"The {food} on {gameObject} isn't IEdible.");
+        }
+
+        if(goldDrop.GetComponent<IGold>() == null)
+        {
+            Debug.LogWarning($"The {goldDrop} on {gameObject} isn't IGold.");
         }
     }
 
@@ -34,6 +40,11 @@ public abstract class Fish : MonoBehaviour
     public GameObject Food
     {
         get { return food; }
+    }
+
+    public GameObject GoldDrop
+    {
+        get { return goldDrop; }
     }
 
     public void CheckCollision(Collider2D collision)
