@@ -60,16 +60,24 @@ public class FoodManager : MonoBehaviour
         currentFood = foodPrefabList[currentFoodIndex];
     }
 
-    void Update()
+    public void SpawnFood()
+    {
+        if (FoodsOnScreen < maxFoodAmount)
+        {
+            Vector3 position = cam.ScreenToWorldPoint(Input.mousePosition);
+            position.z = 0;
+            ObjectPooler.instance.SpawnFromPool(currentFood.name, position, currentFood.transform.rotation);
+        }
+    }
+
+    /*void Update()
     {
         if (Input.GetMouseButtonDown(0) && FoodsOnScreen < maxFoodAmount)
         {
             if (EventSystem.current.currentSelectedGameObject == null) //checks if we pressed a button
             {
-                Vector3 position = cam.ScreenToWorldPoint(Input.mousePosition);
-                position.z = 0;
-                ObjectPooler.instance.SpawnFromPool(currentFood.name, position, currentFood.transform.rotation);
+                
             }
         }
-    }
+    }*/
 }

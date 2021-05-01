@@ -14,7 +14,6 @@ public class CreateAquariumBorders : MonoBehaviour
     private Vector2 screenSize;
     private Vector3 cameraPos;
 
-    // Use this for initialization
     void Start()
     {
         //Generate our empty objects
@@ -57,8 +56,6 @@ public class CreateAquariumBorders : MonoBehaviour
         topCollider.localScale = new Vector3(screenSize.x * 2, colDepth, colDepth);
         topCollider.position = new Vector3(cameraPos.x, (cameraPos.y + screenSize.y + (topCollider.localScale.y * 0.5f)) - (buttonGrid.anchorMin.y * 2) , zPosition);
         
-
-
         bottomCollider.localScale = new Vector3(screenSize.x * 2, colDepth, colDepth);
         bottomCollider.position = new Vector3(cameraPos.x, (cameraPos.y - screenSize.y - (bottomCollider.localScale.y * 0.5f)) + 0.5f, zPosition);
     }
