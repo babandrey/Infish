@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class GoldManager : MonoBehaviour
 {
     [SerializeField] private int goldAmount;
+    [SerializeField] private TextMeshProUGUI goldText;
 
     #region Singleton
 
@@ -17,6 +19,11 @@ public class GoldManager : MonoBehaviour
 
     #endregion
 
+    void Start()
+    {
+        UpdateGoldText();
+    }
+
     public int GoldAmount
     {
         get { return goldAmount; }
@@ -26,10 +33,17 @@ public class GoldManager : MonoBehaviour
     public void AddGold(int amount)
     {
         goldAmount += amount;
+        UpdateGoldText();
     }
 
     public void DecreaseGold(int amount)
     {
         goldAmount = goldAmount - amount >= 0 ? goldAmount - amount : goldAmount;
+        UpdateGoldText();
+    }
+
+    private void UpdateGoldText()
+    {
+        goldText.text = $"Gold: {goldAmount}";
     }
 }
