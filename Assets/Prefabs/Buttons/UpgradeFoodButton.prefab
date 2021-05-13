@@ -127,10 +127,35 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8802258219912021517, guid: 856eb5192a1ea7643bb537b2ad258168,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.30463588
+      objectReference: {fileID: 0}
+    - target: {fileID: 8802258219912021517, guid: 856eb5192a1ea7643bb537b2ad258168,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.1372549
+      objectReference: {fileID: 0}
+    - target: {fileID: 8802258219912021517, guid: 856eb5192a1ea7643bb537b2ad258168,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8802258219964362605, guid: 856eb5192a1ea7643bb537b2ad258168,
         type: 3}
       propertyPath: m_text
       value: Upgrade Food
+      objectReference: {fileID: 0}
+    - target: {fileID: 8802258219964362605, guid: 856eb5192a1ea7643bb537b2ad258168,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8802258219964362605, guid: 856eb5192a1ea7643bb537b2ad258168,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 856eb5192a1ea7643bb537b2ad258168, type: 3}
