@@ -39,14 +39,8 @@ public class Hunger : MonoBehaviour
 
     public float HungerTimer
     {
-        get
-        {
-            return hungerTimer;
-        }
-        set
-        {
-            hungerTimer = value;
-        }
+        get { return hungerTimer; }
+        set { hungerTimer = value; }
     }
 
     IEnumerator SetHungryColor()
@@ -61,9 +55,6 @@ public class Hunger : MonoBehaviour
 
     public bool IsHungry
     {
-        get
-        {
-            return isHungry;
-        }
+        get { return isHungry; }
     }
 }

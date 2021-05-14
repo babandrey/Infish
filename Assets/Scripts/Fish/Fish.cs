@@ -13,16 +13,6 @@ public abstract class Fish : MonoBehaviour
     {
         objectPooler = ObjectPooler.instance;
         hunger = gameObject.GetComponent<Hunger>();
-
-        if(food.GetComponent<IEdible>() == null)
-        {
-            Debug.LogWarning($"The {food} on {gameObject} isn't IEdible.");
-        }
-
-        if(goldDrop.GetComponent<IGold>() == null)
-        {
-            Debug.LogWarning($"The {goldDrop} on {gameObject} isn't IGold.");
-        }
     }
 
     void OnEnable()
@@ -38,11 +28,13 @@ public abstract class Fish : MonoBehaviour
     public GameObject Food
     {
         get { return food; }
+        set { food = value; }
     }
 
     public GameObject GoldDrop
     {
         get { return goldDrop; }
+        set { goldDrop = value; }
     }
 
     public void CheckCollision(Collider2D collision)
@@ -77,4 +69,6 @@ public abstract class Fish : MonoBehaviour
 
         objectPooler.SetObjectInactive(obj);
     }
+
+
 }
