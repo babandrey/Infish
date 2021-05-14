@@ -397,7 +397,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -182.44, y: -36.65}
+  m_AnchoredPosition: {x: -182.44, y: -36.649994}
   m_SizeDelta: {x: 364.89, y: 73.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &267862195
@@ -857,7 +857,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goldAmount: 10000
-  goldText: {fileID: 0}
+  goldText: {fileID: 267862195}
 --- !u!4 &1038073730
 Transform:
   m_ObjectHideFlags: 0
