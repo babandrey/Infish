@@ -102,13 +102,25 @@ public class ObjectPooler : MonoBehaviour
 
     public void SetObjectInactive(GameObject obj)
     {
-        obj.SetActive(false);
-        activePoolDictonary[obj.transform.parent.name].Remove(obj);
-        poolDictonary[obj.transform.parent.name].Enqueue(obj);
+        string tag = obj.transform.parent.name;
 
-        if (edibleFoodPoolDictonary[obj.transform.parent.name].Contains(obj))
+        obj.SetActive(false);
+        activePoolDictonary[tag].Remove(obj);
+        poolDictonary[tag].Enqueue(obj);
+
+        if (edibleFoodPoolDictonary.ContainsKey(tag))
         {
-            edibleFoodPoolDictonary[obj.transform.parent.name].Remove(obj);
+            RemoveObjectFromEdiblePool(obj);
+        } 
+    }
+
+    public void RemoveObjectFromEdiblePool(GameObject obj)
+    {
+        string tag = obj.transform.parent.name;
+
+        if (edibleFoodPoolDictonary[tag].Contains(obj))
+        {
+            edibleFoodPoolDictonary[tag].Remove(obj);
         }
     }
 

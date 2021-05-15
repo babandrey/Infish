@@ -4,6 +4,12 @@ public class Goldfish : Fish, IEdible
 {
     [SerializeField] private float health;
     private IStatus[] statuses = new IStatus[0];
+    private ObjectPooler objectPooler;
+
+    void Start()
+    {
+        objectPooler = ObjectPooler.instance;
+    }
 
     public float Health
     {
@@ -19,9 +25,6 @@ public class Goldfish : Fish, IEdible
     [ContextMenu("Grow Size")]
     private void GrowSize()
     {
-        if (ObjectPooler.instance.EdibleFoodPoolDictonary[transform.parent.name].Contains(gameObject))
-        {
-            ObjectPooler.instance.EdibleFoodPoolDictonary[transform.parent.name].Remove(gameObject);
-        }
+        objectPooler.RemoveObjectFromEdiblePool(gameObject);
     }
 }

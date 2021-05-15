@@ -8,7 +8,7 @@ public class FishMouthOnTriggerEnter : MonoBehaviour
 
     private void Start()
     {
-        fish = gameObject.GetComponentInParent<Fish>();
+        fish = GetComponentInParent<Fish>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
