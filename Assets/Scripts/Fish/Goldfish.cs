@@ -15,4 +15,13 @@ public class Goldfish : Fish, IEdible
     {
         get { return statuses; }
     }
+
+    [ContextMenu("Grow Size")]
+    private void GrowSize()
+    {
+        if (ObjectPooler.instance.EdibleFoodPoolDictonary[transform.parent.name].Contains(gameObject))
+        {
+            ObjectPooler.instance.EdibleFoodPoolDictonary[transform.parent.name].Remove(gameObject);
+        }
+    }
 }

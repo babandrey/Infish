@@ -8,6 +8,7 @@ public class ObjectPooler : MonoBehaviour
     [SerializeField] private List<Pool> pools;
     [SerializeField] private Dictionary<string, Queue<GameObject>> poolDictonary;
     [SerializeField] private Dictionary<string, List<GameObject>> activePoolDictonary;
+    [SerializeField] private Dictionary<string, List<GameObject>> edibleFoodPoolDictonary;
 
     #region Singleton
 
@@ -22,13 +23,20 @@ public class ObjectPooler : MonoBehaviour
     
     void Start()
     {
+        InitializePools();
+    }
+
+    private void InitializePools()
+    {
         poolDictonary = new Dictionary<string, Queue<GameObject>>();
         activePoolDictonary = new Dictionary<string, List<GameObject>>();
+        edibleFoodPoolDictonary = new Dictionary<string, List<GameObject>>();
 
         foreach (Pool pool in pools)
         {
             Queue<GameObject> objectPool = new Queue<GameObject>();
             List<GameObject> activeObjectPool = new List<GameObject>();
+            List<GameObject> edibleFoodPool = new List<GameObject>();
 
             pool.PoolTag = pool.Prefab.name;
 
@@ -44,6 +52,11 @@ public class ObjectPooler : MonoBehaviour
 
             poolDictonary.Add(pool.PoolTag, objectPool);
             activePoolDictonary.Add(pool.PoolTag, activeObjectPool);
+
+            if(pool.IsEdible)
+            {
+                edibleFoodPoolDictonary.Add(pool.PoolTag, edibleFoodPool);
+            }
         }
     }
 
@@ -79,6 +92,11 @@ public class ObjectPooler : MonoBehaviour
 
         activePoolDictonary[tag].Add(objectToSpawn);
 
+        if (edibleFoodPoolDictonary.ContainsKey(tag))
+        {
+            edibleFoodPoolDictonary[tag].Add(objectToSpawn);
+        }
+
         return objectToSpawn;
     }
 
@@ -87,13 +105,20 @@ public class ObjectPooler : MonoBehaviour
         obj.SetActive(false);
         activePoolDictonary[obj.transform.parent.name].Remove(obj);
         poolDictonary[obj.transform.parent.name].Enqueue(obj);
+
+        if (edibleFoodPoolDictonary[obj.transform.parent.name].Contains(obj))
+        {
+            edibleFoodPoolDictonary[obj.transform.parent.name].Remove(obj);
+        }
     }
 
     public Dictionary<string, List<GameObject>> ActivePoolDictonary
     {
-        get
-        {
-            return activePoolDictonary;
-        }
+        get { return activePoolDictonary; }
+    }
+
+    public Dictionary<string, List<GameObject>> EdibleFoodPoolDictonary
+    {
+        get { return edibleFoodPoolDictonary; }
     }
 }

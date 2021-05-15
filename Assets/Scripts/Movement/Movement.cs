@@ -42,7 +42,7 @@ public class Movement : MonoBehaviour
         {
             foreach(GameObject foodObject in fish.Food)
             {
-                if (objectPooler.ActivePoolDictonary[foodObject.name].Count > 0)
+                if (objectPooler.EdibleFoodPoolDictonary[foodObject.name].Count > 0)
                 {
                     ChaseFood();
                     return;
@@ -145,7 +145,7 @@ public class Movement : MonoBehaviour
 
         foreach (GameObject foodObject in fish.Food)
         {
-            foodPool = objectPooler.ActivePoolDictonary[foodObject.name];
+            foodPool = objectPooler.EdibleFoodPoolDictonary[foodObject.name];
 
             foreach (GameObject food in foodPool)
             {

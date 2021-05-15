@@ -45,12 +45,15 @@ public abstract class Fish : MonoBehaviour
 
             if (food != null)
             {
-                foreach(GameObject foodObject in this.food)
+                if (objectPooler.EdibleFoodPoolDictonary[food.Name].Contains(collision.gameObject))
                 {
-                    if(food.Name == foodObject.name)
+                    foreach (GameObject foodObject in this.food)
                     {
-                        Eat(food);
-                        return;
+                        if (food.Name == foodObject.name)
+                        {
+                            Eat(food);
+                            return;
+                        }
                     }
                 }
             }
@@ -60,10 +63,7 @@ public abstract class Fish : MonoBehaviour
     private void Eat(IEdible food)
     {
         MonoBehaviour monoBehaviour = food as MonoBehaviour;
-        if(monoBehaviour == null)
-        {
-            return;
-        }
+        if (monoBehaviour == null) return;
 
         GameObject obj = monoBehaviour.gameObject;
 
@@ -76,6 +76,4 @@ public abstract class Fish : MonoBehaviour
 
         objectPooler.SetObjectInactive(obj);
     }
-
-
 }
