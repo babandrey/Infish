@@ -38,10 +38,16 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(hunger.IsHungry && objectPooler.ActivePoolDictonary[fish.Food.name].Count > 0)
+        if(hunger.IsHungry)
         {
-            ChaseFood();
-            return;
+            foreach(GameObject foodObject in fish.Food)
+            {
+                if (objectPooler.ActivePoolDictonary[foodObject.name].Count > 0)
+                {
+                    ChaseFood();
+                    return;
+                }
+            }  
         }
 
         MoveIdle();
@@ -134,18 +140,21 @@ public class Movement : MonoBehaviour
 
     private GameObject ReturnClosestFood()
     {
-        foodPool = objectPooler.ActivePoolDictonary[fish.Food.name];
-
         GameObject closestFood = null;
         float closestFoodDistance = float.MaxValue;
 
-        foreach (GameObject food in foodPool)
+        foreach (GameObject foodObject in fish.Food)
         {
-            float distance = Vector2.Distance(fishMouth.position, food.transform.position);
-            if (closestFoodDistance > distance)
+            foodPool = objectPooler.ActivePoolDictonary[foodObject.name];
+
+            foreach (GameObject food in foodPool)
             {
-                closestFoodDistance = distance;
-                closestFood = food;
+                float distance = Vector2.Distance(fishMouth.position, food.transform.position);
+                if (closestFoodDistance > distance)
+                {
+                    closestFoodDistance = distance;
+                    closestFood = food;
+                }
             }
         }
 

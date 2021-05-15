@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using System;
 
 [CustomEditor(typeof(Fish), true)]
 public class FishEditor : Editor
@@ -12,22 +13,22 @@ public class FishEditor : Editor
 
         Fish fish = (Fish)target;
 
-        if(fish.Food != null)
+        for (int i = 0; i < fish.Food.Length; i++)
         {
-            if (fish.Food.GetComponent<IEdible>() == null)
-            {
-                Debug.LogError($"The {fish.Food} on {fish.gameObject} isn't IEdible.");
-                fish.Food = null;
-            }
+            fish.Food[i] = fish.Food[i] != null ? CheckIfObjectValid(fish.Food[i], fish.Food[i].GetComponent<IEdible>()) : fish.Food[i];
         }
 
-        if(fish.GoldDrop != null)
+        fish.GoldDrop = fish.GoldDrop != null ? CheckIfObjectValid(fish.GoldDrop, fish.GoldDrop.GetComponent<IGold>()) : fish.GoldDrop;
+    }
+
+    private GameObject CheckIfObjectValid(GameObject obj, IGameComponent componentType)
+    {
+        if (componentType == null)
         {
-            if (fish.GoldDrop.GetComponent<IGold>() == null)
-            {
-                Debug.LogError($"The {fish.GoldDrop} on {fish.gameObject} isn't IGold.");
-                fish.GoldDrop = null;
-            }
-        }   
+            Debug.LogError($"The {obj} on {obj.gameObject} isn't the correct IGameComponent.");
+            return null;
+        }
+
+        return obj;
     }
 }

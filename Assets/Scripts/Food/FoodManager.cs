@@ -11,8 +11,8 @@ public class FoodManager : MonoBehaviour
 
     [Range(1, 10)]
     [SerializeField] private int maxFoodAmount;
-    private Food currentFood;
-    private int currentFoodIndex;
+    [SerializeField] private Food currentFood;
+    [SerializeField] private int currentFoodIndex;
 
     #region Singleton
 
@@ -51,6 +51,7 @@ public class FoodManager : MonoBehaviour
             if(value <= foodPrefabList.Length - 1)
             {
                 currentFoodIndex = value;
+                currentFood = foodPrefabList[currentFoodIndex];
             }
         }
     }

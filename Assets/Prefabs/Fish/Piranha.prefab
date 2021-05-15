@@ -203,7 +203,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Piranha
-  food: {fileID: 7486072874299557660, guid: 228c90d8a5afc91468275178dab6e2d1, type: 3}
+  food:
+  - {fileID: 7486072874299557660, guid: 228c90d8a5afc91468275178dab6e2d1, type: 3}
   goldDrop: {fileID: 8315868128928003939, guid: 5c470609add831f4f9c42a3c42b645b1,
     type: 3}
 --- !u!114 &6725192848295892318
