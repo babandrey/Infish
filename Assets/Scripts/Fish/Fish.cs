@@ -3,7 +3,7 @@ using UnityEngine;
 public abstract class Fish : MonoBehaviour
 {
     [SerializeField] private new string name;
-    [SerializeField] private GameObject food;
+    [SerializeField] private GameObject[] food;
     [SerializeField] private GameObject goldDrop;
 
     private ObjectPooler objectPooler;
@@ -25,7 +25,7 @@ public abstract class Fish : MonoBehaviour
         get { return name; }
     }
 
-    public GameObject Food
+    public GameObject[] Food
     {
         get { return food; }
         set { food = value; }
@@ -43,9 +43,16 @@ public abstract class Fish : MonoBehaviour
         {
             IEdible food = collision.gameObject.GetComponent<IEdible>();
 
-            if (food != null && food.Name == this.food.name)
+            if (food != null)
             {
-                Eat(food);
+                foreach(GameObject foodObject in this.food)
+                {
+                    if(food.Name == foodObject.name)
+                    {
+                        Eat(food);
+                        return;
+                    }
+                }
             }
         }
     }
