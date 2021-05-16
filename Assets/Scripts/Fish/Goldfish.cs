@@ -3,13 +3,10 @@ using UnityEngine;
 public class Goldfish : Fish, IEdible
 {
     [SerializeField] private float health;
+    [SerializeField] private int nutritionalValue;
     private IStatus[] statuses = new IStatus[0];
-    private ObjectPooler objectPooler;
 
-    void Start()
-    {
-        objectPooler = ObjectPooler.instance;
-    }
+    [SerializeField] private GrowSize growSize;
 
     public float Health
     {
@@ -22,9 +19,14 @@ public class Goldfish : Fish, IEdible
         get { return statuses; }
     }
 
-    [ContextMenu("Grow Size")]
-    private void GrowSize()
+    public int NutritionalValue
     {
-        objectPooler.RemoveObjectFromEdiblePool(gameObject);
+        get { return Random.Range(nutritionalValue - 1, nutritionalValue + 1); }
+    }
+
+    public override void Eat(IEdible food)
+    {
+        base.Eat(food);
+        growSize.OnEatFood(food.NutritionalValue);
     }
 }

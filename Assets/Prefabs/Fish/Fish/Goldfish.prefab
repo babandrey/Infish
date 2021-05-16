@@ -87,6 +87,7 @@ GameObject:
   - component: {fileID: 114689332038343048}
   - component: {fileID: 1707798489157371929}
   - component: {fileID: 395103986384517469}
+  - component: {fileID: -2962736765287326378}
   m_Layer: 9
   m_Name: Goldfish
   m_TagString: Untagged
@@ -103,7 +104,7 @@ Transform:
   m_GameObject: {fileID: 7486072874299557660}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children:
   - {fileID: 8848009992547928774}
   m_Father: {fileID: 0}
@@ -278,6 +279,8 @@ MonoBehaviour:
   goldDrop: {fileID: 4908096888708736211, guid: ddb88ba1a373d3e41914ac75ee59bb05,
     type: 3}
   health: 30
+  nutritionalValue: 0
+  growSize: {fileID: -2962736765287326378}
 --- !u!114 &395103986384517469
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -291,3 +294,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeUntilDrop: 15
+--- !u!114 &-2962736765287326378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7486072874299557660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df868e10bc7e5b24c8b26efb1940c285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentFoodToGrow: 0
+  maxFoodToGrow: 5
+  currentGrowTimes: 0
+  maxGrowTimes: 3
