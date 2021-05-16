@@ -6,6 +6,7 @@ public class Food : MonoBehaviour, IEdible
 {
     [SerializeField] private new string name;
     [SerializeField] private float health;
+    [SerializeField] private int nutritionalValue;
     private Sprite sprite;
     private IStatus[] statuses;
 
@@ -47,6 +48,11 @@ public class Food : MonoBehaviour, IEdible
     public IStatus[] Statuses
     {
         get{ return statuses; }
+    }
+
+    public int NutritionalValue
+    {
+        get { return Random.Range(nutritionalValue - 1, nutritionalValue + 1); }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

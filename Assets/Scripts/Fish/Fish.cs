@@ -60,7 +60,7 @@ public abstract class Fish : MonoBehaviour
         }
     }
 
-    private void Eat(IEdible food)
+    public virtual void Eat(IEdible food)
     {
         MonoBehaviour monoBehaviour = food as MonoBehaviour;
         if (monoBehaviour == null) return;

@@ -148,6 +148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Hamburger
   health: 30
+  nutritionalValue: 3
 --- !u!114 &295187828298045908
 MonoBehaviour:
   m_ObjectHideFlags: 0
