@@ -4,8 +4,5 @@ using UnityEngine;
 
 public class Riboz : Fish
 {
-    protected override void OnEnable()
-    {
-        
-    }
+
 }

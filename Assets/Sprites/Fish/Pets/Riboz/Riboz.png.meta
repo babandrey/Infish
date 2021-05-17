@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2040b767dcf40a4489d1c4524e6a6780
+guid: 1619eb83e6bda64469a823cbaebd86ba
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -41,7 +41,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -113,112 +113,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: KillerFish_0
-      rect:
-        serializedVersion: 2
-        x: 2
-        y: 98
-        width: 62
-        height: 38
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ad647ec94f5fa9340800000000000000
-      internalID: 4871476377907840730
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KillerFish_1
-      rect:
-        serializedVersion: 2
-        x: 66
-        y: 98
-        width: 62
-        height: 38
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 75b4c7da8e28b3ad0800000000000000
-      internalID: -2721437613960705193
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KillerFish_3
-      rect:
-        serializedVersion: 2
-        x: 156
-        y: 98
-        width: 62
-        height: 38
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 663b4ee2d2d7545d0800000000000000
-      internalID: -3078917137224125594
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KillerFish_4
-      rect:
-        serializedVersion: 2
-        x: 220
-        y: 98
-        width: 62
-        height: 38
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bb64d7ba1ca1e70b0800000000000000
-      internalID: -5729112256860567877
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KillerFish_5
-      rect:
-        serializedVersion: 2
-        x: 310
-        y: 77
-        width: 61
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 095d91e22ed8dc540800000000000000
-      internalID: 5029832361418282384
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []

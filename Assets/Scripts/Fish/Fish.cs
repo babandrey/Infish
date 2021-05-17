@@ -15,11 +15,6 @@ public abstract class Fish : MonoBehaviour
         hunger = GetComponent<Hunger>();
     }
 
-    protected virtual void OnEnable()
-    {
-        hunger.HungerTimer = 20f;
-    }
-
     public string Name
     { 
         get { return name; }

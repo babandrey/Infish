@@ -255,7 +255,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hungerTimer: 20
-  hungerStartValue: 10
+  onEnableHungerTime: 20
+  hungerStartTime: 10
   hungryColorStartTime: 5
   isHungry: 0
   spriteRenderer: {fileID: 7486072874299557657}
@@ -306,7 +307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df868e10bc7e5b24c8b26efb1940c285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentFoodToGrow: 0
-  maxFoodToGrow: 5
+  maxEatAmount: 5
+  currentEatenAmount: 0
   currentGrowTimes: 0
-  maxGrowTimes: 3
+  maxGrowTimes: 2
