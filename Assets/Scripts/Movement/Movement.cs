@@ -35,8 +35,7 @@ public class Movement : MonoBehaviour
         objectPooler = ObjectPooler.instance;
     }
 
-    // Update is called once per frame
-    void Update()
+    protected virtual void Update()
     {
         if(hunger.IsHungry)
         {
@@ -58,7 +57,7 @@ public class Movement : MonoBehaviour
         transform.Translate(direction * speed * Time.deltaTime, Space.World);
     }
 
-    private void MoveIdle()
+    protected void MoveIdle()
     {
         timeLeft -= Time.deltaTime;
         if (timeLeft <= 0)

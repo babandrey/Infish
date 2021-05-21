@@ -3,30 +3,34 @@ using UnityEngine;
 public class Hunger : MonoBehaviour
 {
     [SerializeField] private float hungerTimer; // lower over time, once gets to 0 the fish dies
-    [SerializeField] private float hungerStartValue;
+    [SerializeField] private float onEnableHungerTime;
+    [SerializeField] private float hungerStartTime;
     [SerializeField] private float hungryColorStartTime; //after the fish becomes hungry
     [SerializeField] private bool isHungry = false;
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private Color hungryColor;
     private Color normalColor;
 
-    // Start is called before the first frame update
-
     void Start()
     {
         normalColor = spriteRenderer.color;
+    }
+
+    void OnEnable()
+    {
+        hungerTimer = onEnableHungerTime;
     }
 
     void Update()
     {
         hungerTimer -= Time.deltaTime;
 
-        if(hungerTimer < hungerStartValue && !isHungry) //fish became hungry
+        if(hungerTimer < hungerStartTime && !isHungry) //fish became hungry
         {
             isHungry = true;
             StartCoroutine(SetHungryColor());
         }
-        else if(hungerTimer > hungerStartValue && isHungry) //fish just ate
+        else if(hungerTimer > hungerStartTime && isHungry) //fish just ate
         {
             isHungry = false;
             spriteRenderer.color = normalColor;

@@ -185,7 +185,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hungerTimer: 25
-  hungerStartValue: 15
+  onEnableHungerTime: 25
+  hungerStartTime: 15
   hungryColorStartTime: 7
   isHungry: 0
   spriteRenderer: {fileID: 2824235091865938180}
