@@ -16,7 +16,7 @@ TagManager:
   - FoodCollider
   - Fish
   - FishCollider
-  - 
+  - SpecialCollider
   - Aquarium
   - 
   - 
