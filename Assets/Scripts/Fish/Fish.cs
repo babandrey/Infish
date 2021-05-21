@@ -36,11 +36,11 @@ public abstract class Fish : MonoBehaviour
     {
         if (hunger.IsHungry)
         {
-            IEdible food = collision.gameObject.GetComponent<IEdible>();
+            IEdible food = collision.GetComponentInParent<IEdible>();
 
             if (food != null)
             {
-                if (objectPooler.EdibleFoodPoolDictonary[food.Name].Contains(collision.gameObject))
+                if (objectPooler.EdibleFoodPoolDictonary[food.Name].Contains(collision.transform.parent.gameObject))
                 {
                     foreach (GameObject foodObject in this.food)
                     {

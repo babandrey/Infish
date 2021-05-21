@@ -277,6 +277,7 @@ MonoBehaviour:
   food:
   - {fileID: 7654938001339126806, guid: 2fbd017bfbbbb5c4ca93dcab962b1ec0, type: 3}
   - {fileID: 289804585611297250, guid: 8622effb56b3c354980ad7f8f7cf4f12, type: 3}
+  - {fileID: 2364298112186847819, guid: 75854fcfc8e26d647a7409945fe8c4b1, type: 3}
   goldDrop: {fileID: 4908096888708736211, guid: ddb88ba1a373d3e41914ac75ee59bb05,
     type: 3}
   health: 30
