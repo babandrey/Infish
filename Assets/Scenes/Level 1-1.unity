@@ -267,8 +267,8 @@ GameObject:
   - component: {fileID: 221259382}
   - component: {fileID: 221259384}
   - component: {fileID: 221259383}
-  - component: {fileID: 221259385}
   - component: {fileID: 221259386}
+  - component: {fileID: 221259385}
   m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
@@ -346,7 +346,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -4.9717407, y: 5.992676}
+  m_Offset: {x: 1.0172424, y: -0.8969116}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -357,7 +357,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1906.0433, y: 1093.2341}
+  m_Size: {x: 1918.0212, y: 1079.455}
   m_EdgeRadius: 0
 --- !u!114 &221259386
 MonoBehaviour:
@@ -644,7 +644,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4791
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -1011,6 +1011,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8494132088807571864, guid: f23fbc0e7f6c61d478af4846584ea347,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494132088807571864, guid: f23fbc0e7f6c61d478af4846584ea347,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494132088807571864, guid: f23fbc0e7f6c61d478af4846584ea347,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494132088807571864, guid: f23fbc0e7f6c61d478af4846584ea347,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8494132088807571865, guid: f23fbc0e7f6c61d478af4846584ea347,
         type: 3}
       propertyPath: m_Enabled
