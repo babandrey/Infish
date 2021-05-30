@@ -6,6 +6,7 @@ using UnityEngine;
 public class GrowSize : MonoBehaviour
 {
     private Fish fish;
+    private DropGold dropGold;
     private ObjectPooler objectPooler;
 
     [SerializeField] private int maxEatAmount;
@@ -13,9 +14,13 @@ public class GrowSize : MonoBehaviour
     [SerializeField] private int currentGrowTimes;
     [SerializeField] private int maxGrowTimes;
 
+    [SerializeField] private int dropGoldSize;
+    [SerializeField] private int becomeUnedibleSize;
+
     private void Awake()
     {
         fish = GetComponent<Fish>();
+        dropGold = GetComponent<DropGold>();
         objectPooler = ObjectPooler.instance;
     }
 
@@ -33,9 +38,19 @@ public class GrowSize : MonoBehaviour
             currentGrowTimes++;
             currentEatenAmount = 0;
 
-            if (currentGrowTimes == 1)
+            if (currentGrowTimes == dropGoldSize)
             {
-                ObjectPooler.instance.RemoveObjectFromEdiblePool(gameObject);
+                fish.IsDroppingGold = true;
+            }
+
+            if (fish.IsDroppingGold)
+            {
+                dropGold.CurrentGoldDropIndex++;
+            }
+
+            if (currentGrowTimes == becomeUnedibleSize)
+            {
+                objectPooler.RemoveObjectFromEdiblePool(gameObject);
             }
 
             LeanTween.scale(gameObject, transform.localScale * 1.4f, 1f).setEaseOutElastic();
