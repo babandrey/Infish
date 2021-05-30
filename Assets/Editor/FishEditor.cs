@@ -18,7 +18,11 @@ public class FishEditor : Editor
             fish.Food[i] = fish.Food[i] != null ? CheckIfObjectValid(fish.Food[i], fish.Food[i].GetComponent<IEdible>()) : fish.Food[i];
         }
 
-        fish.GoldDrop = fish.GoldDrop != null ? CheckIfObjectValid(fish.GoldDrop, fish.GoldDrop.GetComponent<IGold>()) : fish.GoldDrop;
+        for (int i = 0; i < fish.GoldDrop.Length; i++)
+        {
+            fish.GoldDrop[i] = fish.GoldDrop[i] != null ? CheckIfObjectValid(fish.GoldDrop[i], fish.GoldDrop[i].GetComponent<IGold>()) : fish.GoldDrop[i];  
+        }
+
     }
 
     private GameObject CheckIfObjectValid(GameObject obj, IGameComponent componentType)

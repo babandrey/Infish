@@ -4,7 +4,8 @@ public abstract class Fish : MonoBehaviour
 {
     [SerializeField] private new string name;
     [SerializeField] private GameObject[] food;
-    [SerializeField] private GameObject goldDrop;
+    [SerializeField] private GameObject[] goldDrop;
+    [SerializeField] private bool isDroppingGold;
 
     private ObjectPooler objectPooler;
     private Hunger hunger;
@@ -14,6 +15,8 @@ public abstract class Fish : MonoBehaviour
         objectPooler = ObjectPooler.instance;
         hunger = GetComponent<Hunger>();
     }
+
+    #region Getters & Setters
 
     public string Name
     { 
@@ -26,11 +29,19 @@ public abstract class Fish : MonoBehaviour
         set { food = value; }
     }
 
-    public GameObject GoldDrop
+    public GameObject[] GoldDrop
     {
         get { return goldDrop; }
         set { goldDrop = value; }
     }
+
+    public bool IsDroppingGold
+    {
+        get { return isDroppingGold; }
+        set { isDroppingGold = value; }
+    }
+
+    #endregion
 
     public void CheckCollision(Collider2D collision)
     {

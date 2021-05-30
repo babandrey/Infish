@@ -308,8 +308,10 @@ MonoBehaviour:
   food:
   - {fileID: 7654938001339126806, guid: 2fbd017bfbbbb5c4ca93dcab962b1ec0, type: 3}
   - {fileID: 289804585611297250, guid: 8622effb56b3c354980ad7f8f7cf4f12, type: 3}
-  goldDrop: {fileID: 4908096888708736211, guid: ddb88ba1a373d3e41914ac75ee59bb05,
-    type: 3}
+  goldDrop:
+  - {fileID: 4908096888708736211, guid: ddb88ba1a373d3e41914ac75ee59bb05, type: 3}
+  - {fileID: 8315868128928003939, guid: 5c470609add831f4f9c42a3c42b645b1, type: 3}
+  isDroppingGold: 0
   health: 30
   nutritionalValue: 0
   growSize: {fileID: -2962736765287326378}
@@ -342,3 +344,5 @@ MonoBehaviour:
   currentEatenAmount: 0
   currentGrowTimes: 0
   maxGrowTimes: 2
+  dropGoldSize: 1
+  becomeUnedibleSize: 1
