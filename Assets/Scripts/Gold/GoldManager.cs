@@ -6,7 +6,7 @@ using UnityEngine;
 public class GoldManager : MonoBehaviour
 {
     [SerializeField] private int goldAmount;
-    [SerializeField] private TextMeshProUGUI goldText;
+    private TextMeshProUGUI goldText;
 
     #region Singleton
 

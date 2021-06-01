@@ -5,14 +5,14 @@ using UnityEngine.EventSystems;
 
 public class FoodManager : MonoBehaviour
 {
-    [SerializeField] private Camera cam;
+    private Camera cam;
     [SerializeField] private Food[] foodPrefabList;
     private int foodsOnScreen = 0;
 
     [Range(1, 10)]
     [SerializeField] private int maxFoodAmount;
-    [SerializeField] private Food currentFood;
-    [SerializeField] private int currentFoodIndex;
+    private Food currentFood;
+    private int currentFoodIndex = 0;
 
     #region Singleton
 
@@ -72,15 +72,4 @@ public class FoodManager : MonoBehaviour
             ObjectPooler.instance.SpawnFromPool(currentFood.name, position, currentFood.transform.rotation);
         }
     }
-
-    /*void Update()
-    {
-        if (Input.GetMouseButtonDown(0) && FoodsOnScreen < maxFoodAmount)
-        {
-            if (EventSystem.current.currentSelectedGameObject == null) //checks if we pressed a button
-            {
-                
-            }
-        }
-    }*/
 }
