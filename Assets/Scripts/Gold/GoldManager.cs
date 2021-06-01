@@ -21,6 +21,8 @@ public class GoldManager : MonoBehaviour
 
     void Start()
     {
+        goldText = GameObject.Find("Gold Text").GetComponent<TextMeshProUGUI>();
+
         UpdateGoldText();
     }
 

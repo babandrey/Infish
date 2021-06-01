@@ -18,7 +18,7 @@ public class FoodManager : MonoBehaviour
 
     public static FoodManager instance;
 
-    private void Awake()
+    void Awake()
     {
         instance = this;
     }
@@ -59,6 +59,8 @@ public class FoodManager : MonoBehaviour
     void Start()
     {
         currentFood = foodPrefabList[currentFoodIndex];
+
+        cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
     }
 
     public void SpawnFood()
