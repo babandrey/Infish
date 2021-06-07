@@ -1,7 +1,4 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public static class BuyButtonMethods
 {
@@ -43,8 +40,15 @@ public static class BuyButtonMethods
 
     }
 
-    public static void BuyEgg()
+    public static void BuyLevelUp(string goldAmount)
     {
+        int amount = int.Parse(goldAmount);
 
+        if (GoldManager.instance.GoldAmount >= amount)
+        {
+            int currentLevel = SceneManager.GetActiveScene().buildIndex;
+            int nextLevel = currentLevel + 1;
+            LevelManager.instance.ChangeLevel(nextLevel);
+        }
     }
 }

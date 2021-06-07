@@ -21,16 +21,13 @@ public class LevelManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            ChangeLevel("Level 1-2");
-        }
-    }
-
     public void ChangeLevel(string levelName)
     {
         SceneManager.LoadScene(levelName);
+    }
+
+    public void ChangeLevel(int levelBuildIndex)
+    {
+        SceneManager.LoadScene(levelBuildIndex);
     }
 }
