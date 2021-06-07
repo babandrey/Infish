@@ -44,6 +44,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pets:
-  - {fileID: 8494132088807571871, guid: f23fbc0e7f6c61d478af4846584ea347, type: 3}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}

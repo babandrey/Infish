@@ -4,5 +4,17 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Main Menu.unity
+    guid: 97abbd530b68f9343b09d742c488aae0
+  - enabled: 1
+    path: Assets/Scenes/Pet Selection Menu.unity
+    guid: f13756a05452a5c4ab8645bf6b687415
+  - enabled: 1
+    path: Assets/Scenes/Level 1-1.unity
+    guid: cbaf0aaccc730af43ab4eb845c94502d
+  - enabled: 1
+    path: Assets/Scenes/Level 1-2.unity
+    guid: d4fdfb135f0769a488114b13a734b40b
   m_configObjects: {}

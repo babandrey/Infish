@@ -21,8 +21,16 @@ public class LevelManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    public void ChangeLevel(int levelNumber)
+    void Update()
     {
-        SceneManager.LoadScene(levelNumber);
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            ChangeLevel("Level 1-2");
+        }
+    }
+
+    public void ChangeLevel(string levelName)
+    {
+        SceneManager.LoadScene(levelName);
     }
 }
