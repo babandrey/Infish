@@ -135,6 +135,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: PetSpawner
       objectReference: {fileID: 0}
+    - target: {fileID: 5141727732511861866, guid: 9d1e17b15b5841448b68d8a45e42d97b,
+        type: 3}
+      propertyPath: pets.Array.data[0]
+      value: 
+      objectReference: {fileID: 8494132088807571871, guid: f23fbc0e7f6c61d478af4846584ea347,
+        type: 3}
     - target: {fileID: 5141727732511861867, guid: 9d1e17b15b5841448b68d8a45e42d97b,
         type: 3}
       propertyPath: m_RootOrder

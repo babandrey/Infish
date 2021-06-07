@@ -192,16 +192,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2721437613960705193, guid: 2040b767dcf40a4489d1c4524e6a6780,
-    type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1619eb83e6bda64469a823cbaebd86ba, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.9375, y: 0.96875}
+  m_Size: {x: 1, y: 0.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!50 &8494132088807571868
@@ -233,9 +232,9 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8494132088807571871}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d3f74caefc5141841b30e15dc18050d5, type: 2}
+  m_Controller: {fileID: 9100000, guid: bec3b77963e97d74cb0c890ed3e5e672, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -286,5 +285,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Riboz
   food: []
-  goldDrop: {fileID: 4908096888708736211, guid: ddb88ba1a373d3e41914ac75ee59bb05,
-    type: 3}
+  goldDrop:
+  - {fileID: 4908096888708736211, guid: ddb88ba1a373d3e41914ac75ee59bb05, type: 3}
+  isDroppingGold: 1

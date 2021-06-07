@@ -6,7 +6,7 @@ using UnityEngine;
 public class GoldManager : MonoBehaviour
 {
     [SerializeField] private int goldAmount;
-    [SerializeField] private TextMeshProUGUI goldText;
+    private TextMeshProUGUI goldText;
 
     #region Singleton
 
@@ -21,6 +21,8 @@ public class GoldManager : MonoBehaviour
 
     void Start()
     {
+        goldText = GameObject.Find("Gold Text").GetComponent<TextMeshProUGUI>();
+
         UpdateGoldText();
     }
 
