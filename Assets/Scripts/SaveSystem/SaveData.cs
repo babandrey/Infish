@@ -6,7 +6,7 @@ using UnityEngine;
 public class SaveData
 {
     public string saveName;
-    public string currentLevel;
-    public GameObject[] petsUnlocked;
-    public GameObject[] currentPets;
+    public int highestLevel;
+    public List<string> petsUnlocked;
+    public List<string> currentPets;
 }
