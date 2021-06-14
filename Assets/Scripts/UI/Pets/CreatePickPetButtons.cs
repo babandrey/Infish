@@ -44,10 +44,10 @@ public class CreatePickPetButtons : MonoBehaviour
             {
                 randomPet = pets.Values.ElementAt(randomIndex);
 
-                if (!saveManager.activeSave.petsUnlocked.Contains(randomPet.name))
+                if (!saveManager.activeSave.unlockedPets.Contains(randomPet.name))
                 {
                     Instantiate(petButton, transform);
-                    petPool.Add(pets[randomPet.name]);
+                    petPool.Add(pets[randomPet.name]);  
                 }
             }
         }

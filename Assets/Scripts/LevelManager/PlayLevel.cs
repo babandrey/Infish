@@ -28,7 +28,7 @@ public class PlayLevel : MonoBehaviour
     {
         if(highestLevel > SceneManager.GetActiveScene().buildIndex)
         {
-            if (saveManager.activeSave.petsUnlocked.Count > 0)
+            if (saveManager.activeSave.unlockedPets.Count > 0)
             {
                 levelManager.ChangeLevel(1); //Pet Selection Scene
             }

@@ -1,16 +1,14 @@
 using UnityEngine.UI;
 using UnityEngine;
 using TMPro;
+
 public class PetSelectionButton : MonoBehaviour
 {
-    private TextMeshProUGUI nameText;
-    private TextMeshProUGUI descriptionText;
-    private Image image;
+    [SerializeField] private TextMeshProUGUI nameText;
+    [SerializeField] private TextMeshProUGUI descriptionText;
+    [SerializeField] private Image image;
+    private Pet pet;
 
-    void Awake()
-    {
-        image = transform.Find("PetImage").GetComponent<Image>();
-    }
     public void InitializeButton(GameObject petGameObject)
     {
         Pet pet = petGameObject.GetComponent<Pet>();
@@ -19,6 +17,11 @@ public class PetSelectionButton : MonoBehaviour
 
         nameText.text = pet.Name;
         descriptionText.text = pet.Description;
-        image.sprite = pet.GetComponent<Image>().sprite;
+        image.sprite = pet.GetComponent<SpriteRenderer>().sprite;
+    }
+
+    public void UnlockPet()
+    {
+        SaveManager.instance.activeSave.unlockedPets.Add(pet.name);
     }
 }

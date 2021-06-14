@@ -15,7 +15,7 @@ public abstract class Fish : MonoBehaviour
     {
         objectPooler = ObjectPooler.instance;
         hunger = GetComponent<Hunger>();
-        sprite = GetComponent<UnityEngine.UI.Image>().sprite;
+        sprite = GetComponent<SpriteRenderer>().sprite;
     }
 
     #region Getters & Setters

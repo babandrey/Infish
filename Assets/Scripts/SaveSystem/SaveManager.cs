@@ -107,4 +107,9 @@ public class SaveManager : MonoBehaviour
             activeSave.currentPets.Add(name);
         }
     }
+
+    public void UnlockPet(string petName)
+    {
+        activeSave.unlockedPets.Add(petName);
+    }
 }

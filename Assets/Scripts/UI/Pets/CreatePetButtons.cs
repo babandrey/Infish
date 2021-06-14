@@ -18,11 +18,11 @@ public class CreatePetButtons : MonoBehaviour
 
     private void CreateButtons()
     {
-        List<string> petsUnlocked = saveManager.activeSave.petsUnlocked;
+        List<string> unlockedPets = saveManager.activeSave.unlockedPets;
 
         foreach(GameObject pet in pets.Values)
         {
-            if (petsUnlocked.Contains(pet.name))
+            if (unlockedPets.Contains(pet.name))
             {
                 GameObject buttonGameObject = Instantiate(petButton, transform);
                 PetSelectionButton button = buttonGameObject.GetComponent<PetSelectionButton>();

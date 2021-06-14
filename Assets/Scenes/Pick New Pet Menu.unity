@@ -570,7 +570,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c80fd29b71fed84d963c047edf2ca59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  petButton: {fileID: 4066956617830377512, guid: c78912d7ecb043047ade11c1f47eae1b,
+  petButton: {fileID: 984774286870394093, guid: e4ad777530a8f2f4b8db66154e456de4,
     type: 3}
   petData: {fileID: 338942560}
 --- !u!222 &1234275768
