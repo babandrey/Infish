@@ -1,21 +1,24 @@
 using UnityEngine.UI;
 using UnityEngine;
-
+using TMPro;
 public class PetSelectionButton : MonoBehaviour
 {
-    public PetDictonary petDictonary;
-    public string Name { get; set; }
-    public string Description { get; set; }
-    public Image Image { get; set; }
+    private TextMeshProUGUI nameText;
+    private TextMeshProUGUI descriptionText;
+    private Image image;
 
     void Awake()
     {
-        Name = transform.name;
-        Image = transform.Find("PetImage").GetComponent<Image>();
+        image = transform.Find("PetImage").GetComponent<Image>();
     }
-
-    void Start()
+    public void InitializeButton(GameObject petGameObject)
     {
-        //Description = petDictonary.Pets[Name].GetComponent<Pet>().Description;
+        Pet pet = petGameObject.GetComponent<Pet>();
+
+        gameObject.name = $"{pet.name} Button";
+
+        nameText.text = pet.Name;
+        descriptionText.text = pet.Description;
+        image.sprite = pet.Sprite;
     }
 }

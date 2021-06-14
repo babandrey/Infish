@@ -8,12 +8,14 @@ public abstract class Fish : MonoBehaviour
     [SerializeField] private bool isDroppingGold;
 
     private ObjectPooler objectPooler;
+    private Sprite sprite;
     private Hunger hunger;
 
     private void Awake()
     {
         objectPooler = ObjectPooler.instance;
         hunger = GetComponent<Hunger>();
+        sprite = GetComponent<UnityEngine.UI.Image>().sprite;
     }
 
     #region Getters & Setters
@@ -39,6 +41,12 @@ public abstract class Fish : MonoBehaviour
     {
         get { return isDroppingGold; }
         set { isDroppingGold = value; }
+    }
+
+    public Sprite Sprite
+    {
+        get { return sprite; }
+        set { sprite = value; }
     }
 
     #endregion

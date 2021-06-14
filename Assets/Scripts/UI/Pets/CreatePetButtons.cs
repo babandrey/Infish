@@ -24,9 +24,9 @@ public class CreatePetButtons : MonoBehaviour
         {
             if (petsUnlocked.Contains(pet.name))
             {
-                GameObject button = Instantiate(petButton, transform);
-                button.name = $"{pet.name} Button";
-                button.GetComponent<PetSelectionButton>().Image.sprite = pet.GetComponent<Image>().sprite;
+                GameObject buttonGameObject = Instantiate(petButton, transform);
+                PetSelectionButton button = buttonGameObject.GetComponent<PetSelectionButton>();
+                button.InitializeButton(pet);
             } 
         }
     }

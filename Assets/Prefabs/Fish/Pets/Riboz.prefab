@@ -288,3 +288,4 @@ MonoBehaviour:
   goldDrop:
   - {fileID: 4908096888708736211, guid: ddb88ba1a373d3e41914ac75ee59bb05, type: 3}
   isDroppingGold: 1
+  description: Riboz drops gold coins and does not need to eat to survive.

@@ -570,7 +570,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c80fd29b71fed84d963c047edf2ca59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  petButton: {fileID: 0}
+  petButton: {fileID: 4066956617830377512, guid: c78912d7ecb043047ade11c1f47eae1b,
+    type: 3}
   petData: {fileID: 338942560}
 --- !u!222 &1234275768
 CanvasRenderer:

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using UnityEngine.UI;
 
 public class CreatePickPetButtons : MonoBehaviour
 {
@@ -9,8 +10,6 @@ public class CreatePickPetButtons : MonoBehaviour
     [SerializeField] private PetDictonary petData;
     private Dictionary<string, GameObject> pets;
     private SaveManager saveManager;
-
-    private int levelBasedIndex;
 
     void Start()
     {
@@ -21,7 +20,19 @@ public class CreatePickPetButtons : MonoBehaviour
 
     private void CreateButtons()
     {
-        levelBasedIndex = saveManager.activeSave.highestLevel - 3;
+        var pets = GenerateRandomPets();
+
+        foreach (GameObject pet in pets)
+        {
+            GameObject buttonGameObject = Instantiate(petButton, transform);
+            PetSelectionButton button = buttonGameObject.GetComponent<PetSelectionButton>();
+            button.InitializeButton(pet);
+        }
+    }
+    
+    private List<GameObject> GenerateRandomPets()
+    {
+        int levelBasedIndex = saveManager.activeSave.highestLevel - 3;
         List<GameObject> petPool = new List<GameObject>();
 
         while (petPool.Count != 3)
@@ -40,5 +51,7 @@ public class CreatePickPetButtons : MonoBehaviour
                 }
             }
         }
-    }   
+
+        return petPool;
+    }
 }
