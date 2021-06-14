@@ -7,8 +7,9 @@ public class SaveManager : MonoBehaviour
 {
     public static SaveManager instance;
     public SaveData activeSave;
-
     private string savePath;
+
+    private PetSelector petSelector;
 
     void Awake()
     {
@@ -26,6 +27,11 @@ public class SaveManager : MonoBehaviour
         savePath = Application.persistentDataPath;
 
         Load();
+    }
+
+    void Start()
+    {
+        petSelector = GameObject.Find("Button Grid").GetComponent<PetSelector>();
     }
 
     void Update()
@@ -96,8 +102,6 @@ public class SaveManager : MonoBehaviour
 
     private void SavePets()
     {
-        PetSelector petSelector = GameObject.Find("Button Grid").GetComponent<PetSelector>();
-
         foreach(string name in petSelector.Pets)
         {
             activeSave.currentPets.Add(name);

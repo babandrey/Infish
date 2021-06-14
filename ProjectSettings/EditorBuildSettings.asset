@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Pet Selection Menu.unity
     guid: f13756a05452a5c4ab8645bf6b687415
   - enabled: 1
+    path: Assets/Scenes/Pick New Pet Menu.unity
+    guid: 699ede60713309d499daf01636deb67f
+  - enabled: 1
     path: Assets/Scenes/Level 1-1.unity
     guid: cbaf0aaccc730af43ab4eb845c94502d
   - enabled: 1

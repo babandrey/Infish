@@ -26,7 +26,7 @@ public class CreatePetButtons : MonoBehaviour
             {
                 GameObject button = Instantiate(petButton, transform);
                 button.name = $"{pet.name} Button";
-                button.GetComponent<PetSelectionButton>().PetImage.sprite = pet.GetComponent<Image>().sprite;
+                button.GetComponent<PetSelectionButton>().Image.sprite = pet.GetComponent<Image>().sprite;
             } 
         }
     }
