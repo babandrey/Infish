@@ -21,7 +21,7 @@ public class PetSelector : MonoBehaviour
         {
             foreach(Toggle toggle in activeToggles)
             {
-                pets.Add(toggle.transform.Find("PetImage").GetComponent<Image>().name);
+                pets.Add(toggle.name);
             }
 
             return pets;
