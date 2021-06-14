@@ -19,6 +19,6 @@ public class PetSelectionButton : MonoBehaviour
 
         nameText.text = pet.Name;
         descriptionText.text = pet.Description;
-        image.sprite = pet.Sprite;
+        image.sprite = pet.GetComponent<Image>().sprite;
     }
 }

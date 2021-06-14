@@ -20,9 +20,9 @@ public class CreatePickPetButtons : MonoBehaviour
 
     private void CreateButtons()
     {
-        var pets = GenerateRandomPets();
+        var randomPets = GenerateRandomPets();
 
-        foreach (GameObject pet in pets)
+        foreach (GameObject pet in randomPets)
         {
             GameObject buttonGameObject = Instantiate(petButton, transform);
             PetSelectionButton button = buttonGameObject.GetComponent<PetSelectionButton>();
