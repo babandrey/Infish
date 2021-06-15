@@ -4,33 +4,25 @@ using UnityEngine;
 
 public class PetSpawner : MonoBehaviour
 {
-    [SerializeField] private GameObject[] pets = new GameObject[3];
+    public static PetSpawner instance;
+    private SaveManager saveManager;
+    private PetDictonary petDictonary;
+    private void Awake()
+    {
+        instance = this;
+    }
 
     public void Start()
     {
+        petDictonary = PetDictonary.instance;
+        saveManager = SaveManager.instance;
         SpawnPets();
     }
-
-    public void AddPet(GameObject pet)
-    {
-        for(int i = 0; i < pets.Length; i++)
-        {
-            if(pets[i] == null)
-            {
-                pets[i] = pet;
-                return;
-            }
-        }
-    }
-
     private void SpawnPets()
     {
-        foreach (GameObject pet in pets)
+        foreach (string pet in saveManager.activeSave.currentPets)
         {
-            if (pet != null)
-            {
-                Instantiate(pet, pet.transform.position, pet.transform.rotation, transform);
-            }
+            Instantiate(petDictonary.Pets[pet]);
         }
     }
 }

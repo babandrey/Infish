@@ -30,7 +30,8 @@ public class PetSelectionButton : MonoBehaviour
     {
         if (!saveManager.activeSave.unlockedPets.Contains(pet.name))
         {
-            SaveManager.instance.activeSave.unlockedPets.Add(pet.name);
-        }   
+            saveManager.activeSave.unlockedPets.Add(pet.name);
+            saveManager.Save();
+        }
     }
 }

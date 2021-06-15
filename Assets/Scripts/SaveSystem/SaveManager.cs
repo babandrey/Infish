@@ -31,7 +31,7 @@ public class SaveManager : MonoBehaviour
 
     void Start()
     {
-        petSelector = GameObject.Find("Button Grid").GetComponent<PetSelector>();
+        
     }
 
     void Update()
@@ -102,7 +102,9 @@ public class SaveManager : MonoBehaviour
 
     private void SavePets()
     {
-        foreach(string name in petSelector.Pets)
+        petSelector = GameObject.Find("Button Grid").GetComponent<PetSelector>();
+
+        foreach (string name in petSelector.Pets)
         {
             activeSave.currentPets.Add(name);
         }
