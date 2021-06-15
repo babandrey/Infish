@@ -8,10 +8,16 @@ public class PetSelectionButton : MonoBehaviour
     [SerializeField] private TextMeshProUGUI descriptionText;
     [SerializeField] private Image image;
     private Pet pet;
+    private SaveManager saveManager;
+
+    void Start()
+    {
+        saveManager = SaveManager.instance;
+    }
 
     public void InitializeButton(GameObject petGameObject)
     {
-        Pet pet = petGameObject.GetComponent<Pet>();
+        pet = petGameObject.GetComponent<Pet>();
 
         gameObject.name = $"{pet.name} Button";
 
@@ -22,6 +28,9 @@ public class PetSelectionButton : MonoBehaviour
 
     public void UnlockPet()
     {
-        SaveManager.instance.activeSave.unlockedPets.Add(pet.name);
+        if (!saveManager.activeSave.unlockedPets.Contains(pet.name))
+        {
+            SaveManager.instance.activeSave.unlockedPets.Add(pet.name);
+        }   
     }
 }
