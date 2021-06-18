@@ -46,9 +46,7 @@ public static class BuyButtonMethods
 
         if (GoldManager.Instance.GoldAmount >= amount)
         {
-            int currentLevel = SceneManager.GetActiveScene().buildIndex;
-            int nextLevel = currentLevel + 1;
-            LevelManager.Instance.ChangeLevel(nextLevel);
+            LevelManager.Instance.ChangeLevel("Pick New Pet Menu");
         }
     }
 }

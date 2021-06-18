@@ -9,10 +9,12 @@ public class PetSelectionButton : MonoBehaviour
     [SerializeField] private Image image;
     private Pet pet;
     private SaveManager saveManager;
+    private LevelManager levelManager;
 
     void Start()
     {
         saveManager = SaveManager.Instance;
+        levelManager = LevelManager.Instance;
     }
 
     public void InitializeButton(GameObject petGameObject)
@@ -33,5 +35,11 @@ public class PetSelectionButton : MonoBehaviour
             saveManager.activeSave.unlockedPets.Add(pet.name);
             saveManager.Save();
         }
+    }
+
+    public void LoadNextLevel()
+    {
+        saveManager.activeSave.highestLevel++;
+        levelManager.ChangeLevel(saveManager.activeSave.highestLevel);
     }
 }

@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 using TMPro;
 
 public class PlayLevel : MonoBehaviour
@@ -23,16 +22,21 @@ public class PlayLevel : MonoBehaviour
 
     public void LoadLevel()
     {
-        if(highestLevel > SceneManager.GetActiveScene().buildIndex)
+        if(highestLevel == 3) //Level 1-1
         {
-            if (saveManager.activeSave.unlockedPets.Count > 0)
-            {
-                levelManager.ChangeLevel(1); //Pet Selection Scene
-            }
-            else
-            {
-                levelManager.ChangeLevel(highestLevel);
-            }
+            levelManager.ChangeLevel("Level 1-1");
+            return;
         }
+
+        if (saveManager.activeSave.unlockedPets.Count >= 3 && SceneManager.GetActiveScene().buildIndex != 1) //TODO: CHANGE TO ONLY > SIGN
+        {
+            levelManager.ChangeLevel("Pet Selection Menu");
+        }
+        else
+        {
+            saveManager.activeSave.currentPets = saveManager.activeSave.unlockedPets;
+            levelManager.ChangeLevel(saveManager.activeSave.highestLevel);
+        }
+
     }
 }

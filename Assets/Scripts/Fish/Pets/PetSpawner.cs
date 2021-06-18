@@ -23,7 +23,7 @@ public class PetSpawner : MonoBehaviour
     {
         foreach (string pet in saveManager.activeSave.currentPets)
         {
-            Instantiate(petDictonary.Pets[pet]);
+            Instantiate(petDictonary.Pets[pet], transform);
         }
     }
 }
