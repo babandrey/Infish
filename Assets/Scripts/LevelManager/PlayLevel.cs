@@ -10,14 +10,11 @@ public class PlayLevel : MonoBehaviour
     [SerializeField] private TextMeshProUGUI buttonText;
     private int highestLevel;
 
-    void Awake()
-    {
-        saveManager = SaveManager.Instance;
-        levelManager = LevelManager.Instance;
-    }
-
     void Start()
     {
+        levelManager = LevelManager.Instance;
+        saveManager = SaveManager.Instance;
+
         highestLevel = saveManager.activeSave.highestLevel;
         string path = SceneUtility.GetScenePathByBuildIndex(highestLevel);
         string levelName = System.IO.Path.GetFileNameWithoutExtension(path);

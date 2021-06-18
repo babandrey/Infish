@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SaveManager : Singleton<SaveManager>
 {
-    public SaveData activeSave;
+    public SaveData activeSave = new SaveData();
     private string savePath;
 
     private PetSelector petSelector;

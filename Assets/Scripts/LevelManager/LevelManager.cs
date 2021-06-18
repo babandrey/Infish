@@ -5,22 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : Singleton<LevelManager>
 {
-    private SaveManager saveManager;
-
-    private void Start()
-    {
-        saveManager = SaveManager.Instance;
-    }
-
     public void ChangeLevel(string levelName)
     {
-        saveManager.Save();
+        SaveManager.Instance.Save();
         SceneManager.LoadScene(levelName);
     }
 
     public void ChangeLevel(int levelBuildIndex)
     {
-        saveManager.Save();
+        SaveManager.Instance.Save();
         SceneManager.LoadScene(levelBuildIndex);
     }
 }
