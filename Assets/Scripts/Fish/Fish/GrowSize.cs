@@ -21,7 +21,7 @@ public class GrowSize : MonoBehaviour
     {
         fish = GetComponent<Fish>();
         dropGold = GetComponent<DropGold>();
-        objectPooler = ObjectPooler.instance;
+        objectPooler = ObjectPooler.Instance;
     }
 
     public void OnEatFood(int nutritionalValue)

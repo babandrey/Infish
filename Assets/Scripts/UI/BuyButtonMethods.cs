@@ -6,10 +6,10 @@ public static class BuyButtonMethods
     {
         int amount = int.Parse(goldAmount);
 
-        if(GoldManager.instance.GoldAmount >= amount)
+        if(GoldManager.Instance.GoldAmount >= amount)
         {
-            ObjectPooler.instance.SpawnFromPool(tag);
-            GoldManager.instance.DecreaseGold(amount);
+            ObjectPooler.Instance.SpawnFromPool(tag);
+            GoldManager.Instance.DecreaseGold(amount);
         }
     }
 
@@ -17,10 +17,10 @@ public static class BuyButtonMethods
     {
         int amount = 300;
 
-        if (GoldManager.instance.GoldAmount >= amount)
+        if (GoldManager.Instance.GoldAmount >= amount)
         {
-            FoodManager.instance.CurrentFoodIndex++;
-            GoldManager.instance.DecreaseGold(amount);
+            FoodManager.Instance.CurrentFoodIndex++;
+            GoldManager.Instance.DecreaseGold(amount);
         }
     }
 
@@ -28,10 +28,10 @@ public static class BuyButtonMethods
     {
         int amount = 200;
 
-        if (GoldManager.instance.GoldAmount >= amount)
+        if (GoldManager.Instance.GoldAmount >= amount)
         {
-            FoodManager.instance.MaxFoodAmount++;
-            GoldManager.instance.DecreaseGold(amount);
+            FoodManager.Instance.MaxFoodAmount++;
+            GoldManager.Instance.DecreaseGold(amount);
         }
     }
 
@@ -44,11 +44,9 @@ public static class BuyButtonMethods
     {
         int amount = int.Parse(goldAmount);
 
-        if (GoldManager.instance.GoldAmount >= amount)
+        if (GoldManager.Instance.GoldAmount >= amount)
         {
-            int currentLevel = SceneManager.GetActiveScene().buildIndex;
-            int nextLevel = currentLevel + 1;
-            LevelManager.instance.ChangeLevel(nextLevel);
+            LevelManager.Instance.ChangeLevel("Pick New Pet Menu");
         }
     }
 }

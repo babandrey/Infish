@@ -19,8 +19,8 @@ public class Gold : MonoBehaviour, IGold
 
     void Start()
     {
-        objectPooler = ObjectPooler.instance;
-        goldManager = GoldManager.instance;
+        objectPooler = ObjectPooler.Instance;
+        goldManager = GoldManager.Instance;
         rb.freezeRotation = true;
     }
 

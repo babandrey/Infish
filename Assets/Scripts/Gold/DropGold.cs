@@ -12,7 +12,7 @@ public class DropGold : MonoBehaviour
 
     void Awake()
     {
-        objectPooler = ObjectPooler.instance;
+        objectPooler = ObjectPooler.Instance;
 
         fish = GetComponent<Fish>();
         timer = RandomizeTimer();

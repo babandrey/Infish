@@ -32,7 +32,7 @@ public class Movement : MonoBehaviour
 
     private void Start()
     {
-        objectPooler = ObjectPooler.instance;
+        objectPooler = ObjectPooler.Instance;
     }
 
     protected virtual void Update()

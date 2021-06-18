@@ -11,8 +11,12 @@ public class Hunger : MonoBehaviour
     [SerializeField] private Color hungryColor;
     private Color normalColor;
 
+    private ObjectPooler objectPooler;
+
     void Start()
     {
+        ObjectPooler objectPooler = ObjectPooler.Instance;
+
         normalColor = spriteRenderer.color;
     }
 
@@ -37,7 +41,7 @@ public class Hunger : MonoBehaviour
         }
         else if (hungerTimer <= 0)
         {
-            ObjectPooler.instance.SetObjectInactive(gameObject);
+            objectPooler.SetObjectInactive(gameObject);
         }
     }
 
