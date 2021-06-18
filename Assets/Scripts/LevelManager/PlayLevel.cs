@@ -28,13 +28,19 @@ public class PlayLevel : MonoBehaviour
             return;
         }
 
-        if (saveManager.activeSave.unlockedPets.Count >= 3 && SceneManager.GetActiveScene().buildIndex != 1) //TODO: CHANGE TO ONLY > SIGN
+        if (saveManager.activeSave.unlockedPets.Count >= 3) //TODO: CHANGE TO ONLY > SIGN
         {
-            levelManager.ChangeLevel("Pet Selection Menu");
+            if(SceneManager.GetActiveScene().buildIndex != 1)
+            {
+                levelManager.ChangeLevel("Pet Selection Menu");
+            }
+            else
+            {
+                levelManager.ChangeLevel(saveManager.activeSave.highestLevel);
+            }
         }
         else
         {
-            saveManager.activeSave.currentPets = saveManager.activeSave.unlockedPets;
             levelManager.ChangeLevel(saveManager.activeSave.highestLevel);
         }
 

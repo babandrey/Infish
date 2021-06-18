@@ -21,10 +21,18 @@ public class PetSelector : MonoBehaviour
         {
             foreach(Toggle toggle in activeToggles)
             {
-                pets.Add(toggle.name);
+                string petName = toggle.GetComponent<PetSelectionButton>().Pet.name;
+                pets.Add(petName); 
             }
-
             return pets;
+        }
+    }
+
+    public List<Toggle> ActiveToggles
+    {
+        get
+        {
+            return activeToggles;
         }
     }
 

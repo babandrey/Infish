@@ -70,12 +70,9 @@ public class SaveManager : Singleton<SaveManager>
 
     private void SaveLevel()
     {
-        int currentLevel = SceneManager.GetActiveScene().buildIndex;
+        SavePets();
 
-        if(currentLevel == 1) //Pet Selection Scene
-        {
-            SavePets();
-        }
+        int currentLevel = SceneManager.GetActiveScene().buildIndex;
 
         if (currentLevel > activeSave.highestLevel)
         {
@@ -85,12 +82,24 @@ public class SaveManager : Singleton<SaveManager>
 
     private void SavePets()
     {
-        petSelector = GameObject.Find("Button Grid").GetComponent<PetSelector>();
+        activeSave.currentPets.Clear();
 
-        foreach (string name in petSelector.Pets)
+        petSelector = FindObjectOfType<PetSelector>();
+
+        if (petSelector == null)
         {
-            activeSave.currentPets.Add(name);
+            foreach (string petName in activeSave.unlockedPets)
+            {
+                activeSave.currentPets.Add(petName);
+            }
         }
+        else
+        {
+            foreach (string name in petSelector.Pets)
+            {
+                activeSave.currentPets.Add(name);
+            }
+        } 
     }
 
     public void UnlockPet(string petName)

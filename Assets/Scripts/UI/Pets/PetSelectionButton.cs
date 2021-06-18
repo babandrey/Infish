@@ -17,6 +17,11 @@ public class PetSelectionButton : MonoBehaviour
         levelManager = LevelManager.Instance;
     }
 
+    public Pet Pet
+    {
+        get { return pet; }
+    }
+
     public void InitializeButton(GameObject petGameObject)
     {
         pet = petGameObject.GetComponent<Pet>();

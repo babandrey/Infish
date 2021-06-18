@@ -295,6 +295,7 @@ GameObject:
   - component: {fileID: 4066956617830377519}
   - component: {fileID: 4066956617830377518}
   - component: {fileID: 2059544136345445553}
+  - component: {fileID: 8467695759615453981}
   m_Layer: 5
   m_Name: PetSelectionButton
   m_TagString: Untagged
@@ -372,7 +373,19 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8467695759615453981}
+        m_TargetAssemblyTypeName: OnToggleActivator, Assembly-CSharp
+        m_MethodName: OnToggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 0
 --- !u!114 &2059544136345445553
 MonoBehaviour:
@@ -389,6 +402,18 @@ MonoBehaviour:
   nameText: {fileID: 4910508094869002280}
   descriptionText: {fileID: 3591075938747715185}
   image: {fileID: 1031546843732809700}
+--- !u!114 &8467695759615453981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4066956617830377512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7935a8c06ca119949b33184046bb52b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4066956617990980042
 GameObject:
   m_ObjectHideFlags: 0
