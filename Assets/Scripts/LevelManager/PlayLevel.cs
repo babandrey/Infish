@@ -28,7 +28,7 @@ public class PlayLevel : MonoBehaviour
             return;
         }
 
-        if (saveManager.activeSave.unlockedPets.Count >= 3) //TODO: CHANGE TO ONLY > SIGN
+        if (saveManager.activeSave.unlockedPets.Count > 3)
         {
             if(SceneManager.GetActiveScene().buildIndex != 1)
             {
