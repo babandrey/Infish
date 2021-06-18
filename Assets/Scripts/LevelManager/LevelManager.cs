@@ -3,28 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LevelManager : MonoBehaviour
+public class LevelManager : Singleton<LevelManager>
 {
-    public static LevelManager instance;
     private SaveManager saveManager;
-
-    void Awake()
-    {
-        if (instance != null)
-        {
-            Destroy(gameObject);
-        }
-        else
-        {
-            instance = this;
-        }
-
-        DontDestroyOnLoad(gameObject);
-    }
 
     private void Start()
     {
-        saveManager = SaveManager.instance;
+        saveManager = SaveManager.Instance;
     }
 
     public void ChangeLevel(string levelName)

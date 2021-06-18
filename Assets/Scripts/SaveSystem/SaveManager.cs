@@ -3,9 +3,8 @@ using System.IO;
 using System.Xml.Serialization;
 using UnityEngine.SceneManagement;
 
-public class SaveManager : MonoBehaviour
+public class SaveManager : Singleton<SaveManager>
 {
-    public static SaveManager instance;
     public SaveData activeSave;
     private string savePath;
 
@@ -13,25 +12,9 @@ public class SaveManager : MonoBehaviour
 
     void Awake()
     {
-        if(instance == null)
-        {
-            instance = this;
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-
-        DontDestroyOnLoad(gameObject);
-
         savePath = Application.persistentDataPath;
 
         Load();
-    }
-
-    void Start()
-    {
-        
     }
 
     void Update()

@@ -11,7 +11,7 @@ public class CreatePetButtons : MonoBehaviour
 
     void Start()
     {
-        saveManager = SaveManager.instance;
+        saveManager = SaveManager.Instance;
         pets = petData.Pets;
         CreateButtons();
     }

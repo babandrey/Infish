@@ -6,7 +6,7 @@ public class OnBackgroudClicked : MonoBehaviour
 
     void Start()
     {
-        foodManager = FoodManager.instance;
+        foodManager = FoodManager.Instance;
     }
 
     void OnMouseDown()

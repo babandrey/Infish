@@ -14,16 +14,26 @@ public class FoodManager : MonoBehaviour
     private Food currentFood;
     private int currentFoodIndex = 0;
 
+    private ObjectPooler objectPooler;
+
     #region Singleton
 
-    public static FoodManager instance;
+    public static FoodManager Instance;
 
     void Awake()
     {
-        instance = this;
+        Instance = this;
     }
 
     #endregion
+
+    void Start()
+    {
+        currentFood = foodPrefabList[currentFoodIndex];
+
+        objectPooler = ObjectPooler.Instance;
+        cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+    }
 
     public int FoodsOnScreen
     {
@@ -56,20 +66,13 @@ public class FoodManager : MonoBehaviour
         }
     }
 
-    void Start()
-    {
-        currentFood = foodPrefabList[currentFoodIndex];
-
-        cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
-    }
-
     public void SpawnFood()
     {
         if (FoodsOnScreen < maxFoodAmount)
         {
             Vector3 position = cam.ScreenToWorldPoint(Input.mousePosition);
             position.z = 0;
-            ObjectPooler.instance.SpawnFromPool(currentFood.name, position, currentFood.transform.rotation);
+            objectPooler.SpawnFromPool(currentFood.name, position, currentFood.transform.rotation);
         }
     }
 }

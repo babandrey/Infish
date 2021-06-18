@@ -13,7 +13,7 @@ public abstract class Fish : MonoBehaviour
 
     private void Awake()
     {
-        objectPooler = ObjectPooler.instance;
+        objectPooler = ObjectPooler.Instance;
         hunger = GetComponent<Hunger>();
         sprite = GetComponent<SpriteRenderer>().sprite;
     }

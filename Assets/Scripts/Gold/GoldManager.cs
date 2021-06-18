@@ -10,11 +10,11 @@ public class GoldManager : MonoBehaviour
 
     #region Singleton
 
-    public static GoldManager instance;
+    public static GoldManager Instance;
 
     private void Awake()
     {
-        instance = this;
+        Instance = this;
     }
 
     #endregion

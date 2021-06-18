@@ -7,6 +7,7 @@ public class PetSpawner : MonoBehaviour
     public static PetSpawner instance;
     private SaveManager saveManager;
     private PetDictonary petDictonary;
+
     private void Awake()
     {
         instance = this;
@@ -15,7 +16,7 @@ public class PetSpawner : MonoBehaviour
     public void Start()
     {
         petDictonary = PetDictonary.instance;
-        saveManager = SaveManager.instance;
+        saveManager = SaveManager.Instance;
         SpawnPets();
     }
     private void SpawnPets()

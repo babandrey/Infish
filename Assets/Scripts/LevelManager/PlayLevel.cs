@@ -12,8 +12,8 @@ public class PlayLevel : MonoBehaviour
 
     void Awake()
     {
-        saveManager = SaveManager.instance;
-        levelManager = LevelManager.instance;
+        saveManager = SaveManager.Instance;
+        levelManager = LevelManager.Instance;
     }
 
     void Start()

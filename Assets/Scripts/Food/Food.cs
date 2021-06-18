@@ -15,8 +15,8 @@ public class Food : MonoBehaviour, IEdible
 
     private void Awake()
     {
-        objectPooler = ObjectPooler.instance;
-        foodManager = FoodManager.instance;
+        objectPooler = ObjectPooler.Instance;
+        foodManager = FoodManager.Instance;
     }
 
     private void Start()

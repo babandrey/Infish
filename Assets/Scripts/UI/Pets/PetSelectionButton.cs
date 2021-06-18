@@ -12,7 +12,7 @@ public class PetSelectionButton : MonoBehaviour
 
     void Start()
     {
-        saveManager = SaveManager.instance;
+        saveManager = SaveManager.Instance;
     }
 
     public void InitializeButton(GameObject petGameObject)
