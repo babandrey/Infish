@@ -45,6 +45,13 @@ public class PetSelectionButton : MonoBehaviour
     public void LoadNextLevel()
     {
         saveManager.activeSave.highestLevel++;
-        levelManager.ChangeLevel(saveManager.activeSave.highestLevel);
+        if(saveManager.activeSave.unlockedPets.Count >= 3)
+        {
+            levelManager.ChangeLevel("Pet Selection Menu");
+        }
+        else
+        {
+            levelManager.ChangeLevel(saveManager.activeSave.highestLevel);
+        }    
     }
 }
