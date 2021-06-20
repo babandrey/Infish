@@ -7,14 +7,11 @@ using UnityEngine.UI;
 public class CreatePickPetButtons : MonoBehaviour
 {
     [SerializeField] private GameObject petButton;
-    [SerializeField] private PetDictonary petData;
-    private Dictionary<string, GameObject> pets;
     private SaveManager saveManager;
 
     void Start()
     {
         saveManager = SaveManager.Instance;
-        pets = petData.Pets;
         CreateButtons();
     }
 
@@ -32,6 +29,8 @@ public class CreatePickPetButtons : MonoBehaviour
     
     private List<GameObject> GenerateRandomPets()
     {
+        var pets = PetData.Pets;
+
         int levelBasedIndex = saveManager.activeSave.highestLevel - 3;
         List<GameObject> petPool = new List<GameObject>();
 

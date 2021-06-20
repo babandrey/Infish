@@ -5,19 +5,18 @@ using UnityEngine.UI;
 public class CreatePetButtons : MonoBehaviour
 {
     [SerializeField] private GameObject petButton;
-    [SerializeField] private PetDictonary petData;
-    private Dictionary<string, GameObject> pets;
     private SaveManager saveManager;
 
     void Start()
     {
         saveManager = SaveManager.Instance;
-        pets = petData.Pets;
+        
         CreateButtons();
     }
 
     private void CreateButtons()
     {
+        var pets = PetData.Pets;
         List<string> unlockedPets = saveManager.activeSave.unlockedPets;
 
         foreach(string petName in unlockedPets)
