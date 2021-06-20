@@ -22,27 +22,13 @@ public class PlayLevel : MonoBehaviour
 
     public void LoadLevel()
     {
-        if(highestLevel == 3) //Level 1-1
+        if (saveManager.activeSave.unlockedPets.Count > 3 && SceneManager.GetActiveScene().buildIndex != 1)
         {
-            levelManager.ChangeLevel("Level 1-1");
-            return;
-        }
-
-        if (saveManager.activeSave.unlockedPets.Count > 3)
-        {
-            if(SceneManager.GetActiveScene().buildIndex != 1)
-            {
-                levelManager.ChangeLevel("Pet Selection Menu");
-            }
-            else
-            {
-                levelManager.ChangeLevel(saveManager.activeSave.highestLevel);
-            }
+            levelManager.ChangeLevel("Pet Selection Menu");
         }
         else
         {
             levelManager.ChangeLevel(saveManager.activeSave.highestLevel);
         }
-
     }
 }

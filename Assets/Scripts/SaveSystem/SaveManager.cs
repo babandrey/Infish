@@ -13,7 +13,6 @@ public class SaveManager : Singleton<SaveManager>
     void Awake()
     {
         savePath = Application.persistentDataPath;
-
         Load();
     }
 
@@ -28,6 +27,7 @@ public class SaveManager : Singleton<SaveManager>
     public void Save()
     {
         SaveLevel();
+        SavePets();
 
         var serializer = new XmlSerializer(typeof(SaveData));
         var stream = new FileStream(savePath + "/" + activeSave.saveName + ".infish", FileMode.Create);
@@ -70,8 +70,6 @@ public class SaveManager : Singleton<SaveManager>
 
     private void SaveLevel()
     {
-        SavePets();
-
         int currentLevel = SceneManager.GetActiveScene().buildIndex;
 
         if (currentLevel > activeSave.highestLevel)
@@ -99,11 +97,14 @@ public class SaveManager : Singleton<SaveManager>
             {
                 activeSave.currentPets.Add(name);
             }
-        } 
+        }
     }
 
     public void UnlockPet(string petName)
     {
-        activeSave.unlockedPets.Add(petName);
+        if (!activeSave.unlockedPets.Contains(petName))
+        {
+            activeSave.unlockedPets.Add(petName);
+        }
     }
 }
