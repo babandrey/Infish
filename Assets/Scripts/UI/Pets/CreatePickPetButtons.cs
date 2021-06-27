@@ -1,8 +1,5 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.Linq;
-using UnityEngine.UI;
 
 public class CreatePickPetButtons : MonoBehaviour
 {
@@ -29,27 +26,34 @@ public class CreatePickPetButtons : MonoBehaviour
     
     private List<GameObject> GenerateRandomPets()
     {
-        var pets = PetData.Pets;
+        string[] petNames = PetData.PetNames;
+        List<string> petPool = new List<string>();
 
         int levelBasedIndex = saveManager.activeSave.highestLevel - 3;
-        List<GameObject> petPool = new List<GameObject>();
 
         while (petPool.Count != 3)
         {
             int randomIndex = Random.Range(levelBasedIndex, levelBasedIndex + 5);
-            GameObject randomPet;
+            string randomPetName;
 
-            if (randomIndex <= pets.Count - 1)
+            if (randomIndex <= petNames.Length)
             {
-                randomPet = pets.Values.ElementAt(randomIndex);
+                randomPetName = petNames[randomIndex];
 
-                if (!saveManager.activeSave.unlockedPets.Contains(randomPet.name) && !petPool.Contains(randomPet))
+                if (!saveManager.activeSave.unlockedPets.Contains(randomPetName) && !petPool.Contains(randomPetName))
                 {
-                    petPool.Add(pets[randomPet.name]);
+                    petPool.Add(randomPetName);
                 }
             }
         }
 
-        return petPool;
+        List<GameObject> randomPets = new List<GameObject>();
+
+        foreach (string petName in petPool)
+        {
+            randomPets.Add(PetData.GetPetData(petName));
+        }
+
+        return randomPets;
     }
 }

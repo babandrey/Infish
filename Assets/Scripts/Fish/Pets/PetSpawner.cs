@@ -11,9 +11,9 @@ public class PetSpawner : MonoBehaviour
     }
     private void SpawnPets()
     {
-        foreach (string pet in saveManager.activeSave.currentPets)
+        foreach (string petName in saveManager.activeSave.currentPets)
         {
-            GameObject petGameObject = PetData.Pets[pet];
+            GameObject petGameObject = PetData.GetPetData(petName);
             Instantiate(petGameObject, transform);
         }
     }

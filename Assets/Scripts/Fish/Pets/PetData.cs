@@ -1,30 +1,32 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-public class PetData
+
+public static class PetData
 {
     private static string petsPrefabPath = "Prefabs/Fish/Pets/";
-    private static GameObject[] loadedPets = GetPetsData();
-    private static Dictionary<string, GameObject> pets = CreatePetDictonary();
-    private static GameObject[] GetPetsData()
-    {
-        return Resources.LoadAll<GameObject>(petsPrefabPath);
-    }
+    private static string[] petNames = GetPetNames();
 
-    private static Dictionary<string, GameObject> CreatePetDictonary()
+    private static string[] GetPetNames()
     {
-        var petDictonary = new Dictionary<string, GameObject>();
+        GameObject[] pets = Resources.LoadAll<GameObject>(petsPrefabPath);
+        string[] petNames = new string[pets.Length];
 
-        foreach(GameObject pet in loadedPets)
+        for(int i = 0; i < pets.Length; i++)
         {
-            petDictonary.Add(pet.name, pet);
+            petNames[i] = pets[i].name;
         }
 
-        return petDictonary;
+        Resources.UnloadUnusedAssets();
+
+        return petNames;
     }
 
-    public static Dictionary<string, GameObject> Pets
+    public static GameObject GetPetData(string petName)
     {
-        get { return pets; }
+        return Resources.Load<GameObject>(petsPrefabPath + petName);
+    }
+
+    public static string[] PetNames
+    {
+        get { return petNames; }
     }
 }
