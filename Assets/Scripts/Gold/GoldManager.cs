@@ -1,49 +1,26 @@
-using TMPro;
+using System;
 using UnityEngine;
 
-public class GoldManager : MonoBehaviour
+public static class GoldManager
 {
-    [SerializeField] private int goldAmount;
-    private TextMeshProUGUI goldText;
+    [SerializeField] private static int goldAmount = 10000;
+    public static Action<int> OnGoldUpdated;
 
-    #region Singleton
-
-    public static GoldManager Instance;
-
-    private void Awake()
+    public static void AddGold(int amount)
     {
-        Instance = this;
+        goldAmount += amount;
+        OnGoldUpdated(goldAmount);
     }
 
-    #endregion
-
-    void Start()
+    public static void DecreaseGold(int amount)
     {
-        goldText = GameObject.Find("Gold Text").GetComponent<TextMeshProUGUI>();
-
-        UpdateGoldText();
+        goldAmount = goldAmount - amount >= 0 ? goldAmount - amount : goldAmount;
+        OnGoldUpdated(goldAmount);
     }
 
-    public int GoldAmount
+    public static int GoldAmount
     {
         get { return goldAmount; }
         set { goldAmount = value; }
-    }
-
-    public void AddGold(int amount)
-    {
-        goldAmount += amount;
-        UpdateGoldText();
-    }
-
-    public void DecreaseGold(int amount)
-    {
-        goldAmount = goldAmount - amount >= 0 ? goldAmount - amount : goldAmount;
-        UpdateGoldText();
-    }
-
-    private void UpdateGoldText()
-    {
-        goldText.text = $"Gold: {goldAmount}";
     }
 }

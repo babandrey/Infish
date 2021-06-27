@@ -4,7 +4,6 @@ using UnityEngine;
 public class Gold : MonoBehaviour, IGold
 {
     ObjectPooler objectPooler;
-    GoldManager goldManager;
     Rigidbody2D rb;
 
     [SerializeField] private new string name;
@@ -20,7 +19,6 @@ public class Gold : MonoBehaviour, IGold
     void Start()
     {
         objectPooler = ObjectPooler.Instance;
-        goldManager = GoldManager.Instance;
         rb.freezeRotation = true;
     }
 
@@ -41,7 +39,7 @@ public class Gold : MonoBehaviour, IGold
 
     public void OnMouseDown()
     {
-        goldManager.AddGold(Amount);
+        GoldManager.AddGold(Amount);
         objectPooler.SetObjectInactive(gameObject);
     }
 
