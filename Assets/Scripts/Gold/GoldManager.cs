@@ -23,4 +23,9 @@ public static class GoldManager
         get { return goldAmount; }
         set { goldAmount = value; }
     }
+
+    public static void Reset()
+    {
+        goldAmount = 10000;
+    }
 }
