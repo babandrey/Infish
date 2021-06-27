@@ -2,12 +2,13 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : Singleton<LevelManager>
 {
+    private int levelOneBuildIndex = 2;
     public void ChangeLevel(string levelName)
     {
         SaveManager.Instance.Save();
         SceneManager.LoadScene(levelName);
 
-        if(SceneManager.GetSceneByName(levelName).buildIndex > 2) //Level 1-1 or higher
+        if(SceneManager.GetSceneByName(levelName).buildIndex > levelOneBuildIndex)
         {
             GoldManager.Reset();
         }
@@ -18,7 +19,7 @@ public class LevelManager : Singleton<LevelManager>
         SaveManager.Instance.Save();
         SceneManager.LoadScene(levelBuildIndex);
 
-        if (levelBuildIndex > 2) //Level 1-1 or higher
+        if (levelBuildIndex > levelOneBuildIndex)
         {
             GoldManager.Reset();
         }
