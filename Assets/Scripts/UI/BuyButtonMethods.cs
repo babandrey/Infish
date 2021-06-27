@@ -1,15 +1,13 @@
-using UnityEngine.SceneManagement;
-
 public static class BuyButtonMethods
 {
     public static void SpawnFish(string tag, string goldAmount)
     {
         int amount = int.Parse(goldAmount);
 
-        if(GoldManager.Instance.GoldAmount >= amount)
+        if(GoldManager.GoldAmount >= amount)
         {
             ObjectPooler.Instance.SpawnFromPool(tag);
-            GoldManager.Instance.DecreaseGold(amount);
+            GoldManager.DecreaseGold(amount);
         }
     }
 
@@ -17,10 +15,10 @@ public static class BuyButtonMethods
     {
         int amount = 300;
 
-        if (GoldManager.Instance.GoldAmount >= amount)
+        if (GoldManager.GoldAmount >= amount)
         {
             FoodManager.Instance.CurrentFoodIndex++;
-            GoldManager.Instance.DecreaseGold(amount);
+            GoldManager.DecreaseGold(amount);
         }
     }
 
@@ -28,10 +26,10 @@ public static class BuyButtonMethods
     {
         int amount = 200;
 
-        if (GoldManager.Instance.GoldAmount >= amount)
+        if (GoldManager.GoldAmount >= amount)
         {
             FoodManager.Instance.MaxFoodAmount++;
-            GoldManager.Instance.DecreaseGold(amount);
+            GoldManager.DecreaseGold(amount);
         }
     }
 
@@ -44,7 +42,7 @@ public static class BuyButtonMethods
     {
         int amount = int.Parse(goldAmount);
 
-        if (GoldManager.Instance.GoldAmount >= amount)
+        if (GoldManager.GoldAmount >= amount)
         {
             LevelManager.Instance.ChangeLevel("Pick New Pet Menu");
         }
