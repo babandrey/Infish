@@ -73,6 +73,7 @@ public class FoodManager : MonoBehaviour
             Vector3 position = cam.ScreenToWorldPoint(Input.mousePosition);
             position.z = 0;
             objectPooler.SpawnFromPool(currentFood.name, position, currentFood.transform.rotation);
+            GoldManager.DecreaseGold(5);
         }
     }
 }
