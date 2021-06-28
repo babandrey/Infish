@@ -4,7 +4,7 @@ public class FishMouthOnTriggerEnter : MonoBehaviour
 {
     private Fish fish;
 
-    private void Start()
+    private void Awake()
     {
         fish = GetComponentInParent<Fish>();
     }
