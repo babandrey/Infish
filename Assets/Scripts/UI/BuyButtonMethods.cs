@@ -3,6 +3,7 @@ using UnityEngine;
 public static class BuyButtonMethods
 {
     private static float maxFishHeight = 0;
+    private static Vector2 downForce = new Vector2(0f, -2.7f);
     public static void SpawnFish(string tag, string goldAmount)
     {
         int amount = int.Parse(goldAmount);
@@ -18,9 +19,8 @@ public static class BuyButtonMethods
 
             Vector3 position = new Vector3(Utility.GenerateRandomVector3().x, maxFishHeight, 0);
 
-            ObjectPooler.Instance.SpawnFromPool(tag, position);
-
-            //Add force down
+            GameObject fishSpawned = ObjectPooler.Instance.SpawnFromPool(tag, position);
+            fishSpawned.GetComponent<Rigidbody2D>().AddForce(downForce, ForceMode2D.Impulse);
 
             GoldManager.DecreaseGold(amount);
         }
