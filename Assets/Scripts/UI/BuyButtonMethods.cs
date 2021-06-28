@@ -1,3 +1,5 @@
+using UnityEngine;
+
 public static class BuyButtonMethods
 {
     public static void SpawnFish(string tag, string goldAmount)
@@ -6,7 +8,11 @@ public static class BuyButtonMethods
 
         if(GoldManager.GoldAmount >= amount)
         {
-            ObjectPooler.Instance.SpawnFromPool(tag);
+            Vector3 position = new Vector3(Utility.GenerateRandomVector3().x, Camera.main.ViewportToWorldPoint(new Vector3(0, Random.value)).y, 0);
+
+            ObjectPooler.Instance.SpawnFromPool(tag, position);
+
+            //Add force down
             GoldManager.DecreaseGold(amount);
         }
     }
