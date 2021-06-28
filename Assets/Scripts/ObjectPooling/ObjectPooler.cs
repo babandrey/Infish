@@ -109,7 +109,7 @@ public class ObjectPooler : MonoBehaviour
         if (edibleFoodPoolDictonary.ContainsKey(tag))
         {
             RemoveObjectFromEdiblePool(obj);
-        } 
+        }
     }
 
     public void RemoveObjectFromEdiblePool(GameObject obj)
