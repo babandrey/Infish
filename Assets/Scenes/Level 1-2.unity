@@ -1122,26 +1122,6 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1966960878}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2010658301 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2869517585180188807, guid: f681a6990bb448743b5db13d1cc9d1f2,
-    type: 3}
-  m_PrefabInstance: {fileID: 2869517584330315130}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2010658302
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2010658301}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6255ad1bcd647d7469f1ea12c8620f21, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  aliens:
-  - {fileID: 0}
 --- !u!1001 &2869517584330315130
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1149,6 +1129,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2010658302, guid: f681a6990bb448743b5db13d1cc9d1f2, type: 3}
+      propertyPath: timer
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 2010658302, guid: f681a6990bb448743b5db13d1cc9d1f2, type: 3}
+      propertyPath: aliens.Array.data[0]
+      value: 
+      objectReference: {fileID: 4503372116266914929, guid: c8be20299f6e2ae44a7fe8b23189c6b9,
+        type: 3}
     - target: {fileID: 2869517585180188804, guid: f681a6990bb448743b5db13d1cc9d1f2,
         type: 3}
       propertyPath: m_RootOrder

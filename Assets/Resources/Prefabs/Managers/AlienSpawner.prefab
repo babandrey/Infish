@@ -45,3 +45,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   aliens:
   - {fileID: 0}
+  timer: 30
+  currentAlienIndex: 0
