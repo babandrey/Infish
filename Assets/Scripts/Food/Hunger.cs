@@ -15,7 +15,7 @@ public class Hunger : MonoBehaviour
 
     void Start()
     {
-        ObjectPooler objectPooler = ObjectPooler.Instance;
+        objectPooler = ObjectPooler.Instance;
 
         normalColor = spriteRenderer.color;
     }

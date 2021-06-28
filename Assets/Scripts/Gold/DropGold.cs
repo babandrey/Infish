@@ -59,7 +59,7 @@ public class DropGold : MonoBehaviour
 
     private void SpawnGoldDrop()
     {
-        objectPooler.SpawnFromPool(currentGoldDrop.name, fish.transform.position, currentGoldDrop.transform.rotation);
+        objectPooler.SpawnFromPool(currentGoldDrop.name, fish.transform.position);
     }
 
     private float RandomizeTimer()

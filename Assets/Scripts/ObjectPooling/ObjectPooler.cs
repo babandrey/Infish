@@ -22,6 +22,9 @@ public class ObjectPooler : MonoBehaviour
     void Start()
     {
         InitializePools();
+
+        SpawnFromPool("Goldfish", Utility.GenerateRandomVector3());
+        SpawnFromPool("Goldfish", Utility.GenerateRandomVector3());
     }
 
     private void InitializePools()
@@ -58,12 +61,11 @@ public class ObjectPooler : MonoBehaviour
         }
     }
 
-    public GameObject SpawnFromPool(string tag, Vector3 position, Quaternion rotation)
+    public GameObject SpawnFromPool(string tag, Vector3 position)
     {
         GameObject objectToSpawn = SpawnFromPool(tag);
 
         objectToSpawn.transform.position = position;
-        objectToSpawn.transform.rotation = rotation;
 
         return objectToSpawn;
     }
@@ -109,7 +111,7 @@ public class ObjectPooler : MonoBehaviour
         if (edibleFoodPoolDictonary.ContainsKey(tag))
         {
             RemoveObjectFromEdiblePool(obj);
-        } 
+        }
     }
 
     public void RemoveObjectFromEdiblePool(GameObject obj)
