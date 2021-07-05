@@ -3,6 +3,12 @@ using UnityEngine;
 public class Alien : MonoBehaviour
 {
     [SerializeField] private int health;
+    private new Rigidbody2D rigidbody;
+
+    void Awake()
+    {
+        rigidbody = GetComponent<Rigidbody2D>();
+    }
 
     public int Health
     {
@@ -11,12 +17,26 @@ public class Alien : MonoBehaviour
 
     void OnMouseDown()
     {
-        //health -= //insert alien gun dammage here
+        health -= 5; //chaange from hard coded to gun dammage
 
-        if(health <= 0)
+        MoveAlienOnClick();
+
+        if (health <= 0)
         {
-            GameStateManager.RemoveActiveAlien(gameObject);
-            Destroy(gameObject);
+            DestroyAlien();
         }
+    }
+
+    void MoveAlienOnClick()
+    {
+        Vector3 mousePosition = Input.mousePosition;
+        Vector3 direction = (mousePosition - transform.position).normalized;
+        rigidbody.AddForce(direction, ForceMode2D.Impulse);
+    }
+
+    private void DestroyAlien()
+    {
+        GameStateManager.RemoveActiveAlien(gameObject);
+        Destroy(gameObject);
     }
 }

@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 682648755108500342}
   - component: {fileID: 6750540426108666734}
   - component: {fileID: 2377252406997335799}
+  - component: {fileID: 4737448707485251479}
   m_Layer: 9
   m_Name: Antay
   m_TagString: Untagged
@@ -109,7 +110,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!95 &4503372116266914935
 Animator:
   serializedVersion: 3
@@ -174,6 +175,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cbffd9c184225b44b3119052b075c83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
+--- !u!61 &4737448707485251479
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4503372116266914929}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.14315248, y: 0.0034494326}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 0.5}
+    newSize: {x: 1, y: 0.5}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.6241461, y: 0.33613372}
+  m_EdgeRadius: 0
 --- !u!1 &5470685707674137515
 GameObject:
   m_ObjectHideFlags: 0
