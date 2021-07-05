@@ -6,6 +6,7 @@ public class AlienSpawner : MonoBehaviour
     [SerializeField] private float startTime;
     [SerializeField] private float timer;
     [SerializeField] private int currentAlienIndex = 0;
+    [SerializeField] private int aliensToSpawn;
 
     void Start()
     {
@@ -20,7 +21,11 @@ public class AlienSpawner : MonoBehaviour
 
             if (timer <= 0)
             {
-                SpawnAlien();
+                for(int i = 0; i < aliensToSpawn; i++)
+                {
+                    SpawnAlien();
+                }
+                
                 GameStateManager.IsFighting = true;
                 timer = startTime;
             }
@@ -29,7 +34,8 @@ public class AlienSpawner : MonoBehaviour
 
     private void SpawnAlien()
     {
-        Instantiate(aliens[currentAlienIndex], Utility.GenerateRandomVector3(), aliens[currentAlienIndex].transform.rotation, transform);
+        GameObject alien = Instantiate(aliens[currentAlienIndex], Utility.GenerateRandomVector3(), aliens[currentAlienIndex].transform.rotation, transform);
+        GameStateManager.AddActiveAlien(alien);
 
         if (aliens.Length - 1 > currentAlienIndex)
         {
