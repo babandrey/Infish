@@ -24,7 +24,7 @@ public class Goldfish : Fish, IEdible
         get { return Random.Range(nutritionalValue - 1, nutritionalValue + 1); }
     }
 
-    public override void Eat(IEdible food)
+    protected override void Eat(IEdible food)
     {
         base.Eat(food);
         growSize.OnEatFood(food.NutritionalValue);

@@ -11,6 +11,9 @@ public class OnBackgroudClicked : MonoBehaviour
 
     void OnMouseDown()
     {
-        foodManager.SpawnFood();
+        if (!GameStateManager.IsFighting)
+        {
+            foodManager.SpawnFood();
+        }
     }
 }

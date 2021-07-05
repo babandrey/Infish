@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 4503372116266914932}
   - component: {fileID: 4503372116266914930}
   - component: {fileID: 4503372116266914935}
-  - component: {fileID: 2972163025023205911}
-  - component: {fileID: 5159080054319958658}
+  - component: {fileID: 682648755108500342}
+  - component: {fileID: 6750540426108666734}
   m_Layer: 9
   m_Name: Antay
   m_TagString: Untagged
@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 4503372116266914929}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
   - {fileID: 2546394971343165867}
   - {fileID: 6350080802922490013}
@@ -128,7 +128,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &2972163025023205911
+--- !u!114 &682648755108500342
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -140,10 +140,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 572839eaa80e79e4b9be808cf69d8e78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isFacingRight: 1
-  speed: 1
+  isFacingRight: 0
+  speed: 0
   hungrySpeed: 0
---- !u!114 &5159080054319958658
+--- !u!114 &6750540426108666734
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -152,9 +152,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 4503372116266914929}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d73bb7b1a660692409807629f44c6d73, type: 3}
+  m_Script: {fileID: 11500000, guid: ff8e92e8b9a63cc45b6572975f652f64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  name: Antay
+  food:
+  - {fileID: 7486072874299557660, guid: 228c90d8a5afc91468275178dab6e2d1, type: 3}
+  - {fileID: 2824235091865938177, guid: e938715e20af24a4abb4af0185cb6ccc, type: 3}
+  goldDrop: []
+  isDroppingGold: 0
 --- !u!1 &5470685707674137515
 GameObject:
   m_ObjectHideFlags: 0
@@ -165,6 +171,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2546394971343165867}
   - component: {fileID: 5592194107656484790}
+  - component: {fileID: 6410349499240274017}
   m_Layer: 10
   m_Name: Fish Mouth
   m_TagString: Untagged
@@ -180,7 +187,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5470685707674137515}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.297, y: 0.014, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4503372116266914933}
@@ -199,7 +206,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.2974759, y: -0.0019086599}
+  m_Offset: {x: -0.03966877, y: -0.00862363}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -210,8 +217,20 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.4180848, y: 0.2707656}
+  m_Size: {x: 0.30338103, y: 0.39996576}
   m_EdgeRadius: 0
+--- !u!114 &6410349499240274017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5470685707674137515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a60348c6d85ea3a47977a737bb37fde4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9168217289843842318
 GameObject:
   m_ObjectHideFlags: 0
@@ -256,7 +275,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.12590513, y: 0.00172472}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -267,5 +286,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6, y: 0.55}
+  m_Size: {x: 0.72073096, y: 0.40857232}
   m_EdgeRadius: 0

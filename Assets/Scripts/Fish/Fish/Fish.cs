@@ -3,11 +3,11 @@ using UnityEngine;
 public abstract class Fish : MonoBehaviour
 {
     [SerializeField] private new string name;
-    [SerializeField] private GameObject[] food;
+    [SerializeField] protected GameObject[] food;
     [SerializeField] private GameObject[] goldDrop;
     [SerializeField] private bool isDroppingGold;
 
-    private ObjectPooler objectPooler;
+    protected ObjectPooler objectPooler;
     private Sprite sprite;
     private Hunger hunger;
 
@@ -51,7 +51,7 @@ public abstract class Fish : MonoBehaviour
 
     #endregion
 
-    public void CheckCollision(Collider2D collision)
+    public virtual void CheckCollision(Collider2D collision)
     {
         if (hunger.IsHungry)
         {
@@ -74,7 +74,7 @@ public abstract class Fish : MonoBehaviour
         }
     }
 
-    public virtual void Eat(IEdible food)
+    protected virtual void Eat(IEdible food)
     {
         MonoBehaviour monoBehaviour = food as MonoBehaviour;
         if (monoBehaviour == null) return;

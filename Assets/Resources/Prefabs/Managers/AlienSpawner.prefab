@@ -44,6 +44,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aliens:
-  - {fileID: 0}
+  - {fileID: 4503372116266914929, guid: c8be20299f6e2ae44a7fe8b23189c6b9, type: 3}
   timer: 30
   currentAlienIndex: 0

@@ -3,16 +3,27 @@ using UnityEngine;
 public class AlienSpawner : MonoBehaviour
 {
     [SerializeField] private GameObject[] aliens;
+    [SerializeField] private float startTime;
     [SerializeField] private float timer;
     [SerializeField] private int currentAlienIndex = 0;
 
+    void Start()
+    {
+        timer = startTime;
+    }
+
     void Update()
     {
-        timer -= Time.deltaTime;
-
-        if(timer <= 0)
+        if (!GameStateManager.IsFighting)
         {
-            SpawnAlien();
+            timer -= Time.deltaTime;
+
+            if (timer <= 0)
+            {
+                SpawnAlien();
+                GameStateManager.IsFighting = true;
+                timer = startTime;
+            }
         }
     }
 
