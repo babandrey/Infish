@@ -27,14 +27,22 @@ public class Hunger : MonoBehaviour
 
     void Update()
     {
+        if (!GameStateManager.IsFighting)
+        {
+            ProgressHunger();
+        }
+    }
+
+    private void ProgressHunger()
+    {
         hungerTimer -= Time.deltaTime;
 
-        if(hungerTimer < hungerStartTime && !isHungry) //fish became hungry
+        if (hungerTimer < hungerStartTime && !isHungry) //fish became hungry
         {
             isHungry = true;
             StartCoroutine(SetHungryColor());
         }
-        else if(hungerTimer > hungerStartTime && isHungry) //fish just ate
+        else if (hungerTimer > hungerStartTime && isHungry) //fish just ate
         {
             isHungry = false;
             spriteRenderer.color = normalColor;

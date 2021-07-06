@@ -47,12 +47,15 @@ public class DropGold : MonoBehaviour
     {
         if (fish.IsDroppingGold)
         {
-            timer -= Time.deltaTime;
-
-            if (timer <= 0)
+            if (!GameStateManager.IsFighting)
             {
-                SpawnGoldDrop();
-                timer = RandomizeTimer();
+                timer -= Time.deltaTime;
+
+                if (timer <= 0)
+                {
+                    SpawnGoldDrop();
+                    timer = RandomizeTimer();
+                }
             }
         }
     }
