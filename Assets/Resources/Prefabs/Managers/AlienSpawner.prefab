@@ -45,5 +45,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   aliens:
   - {fileID: 4503372116266914929, guid: c8be20299f6e2ae44a7fe8b23189c6b9, type: 3}
-  timer: 30
+  startTime: 30
+  timer: 0
   currentAlienIndex: 0
+  aliensToSpawn: 1

@@ -4,9 +4,11 @@ using UnityEngine;
 public class ObjectPooler : MonoBehaviour
 {
     [SerializeField] private List<Pool> pools;
-    [SerializeField] private Dictionary<string, Queue<GameObject>> poolDictonary;
-    [SerializeField] private Dictionary<string, List<GameObject>> activePoolDictonary;
-    [SerializeField] private Dictionary<string, List<GameObject>> edibleFoodPoolDictonary;
+    private Dictionary<string, Queue<GameObject>> poolDictonary;
+    private Dictionary<string, List<GameObject>> activePoolDictonary;
+    private Dictionary<string, List<GameObject>> edibleFoodPoolDictonary;
+
+    private int activeObjects = 0;
 
     #region Singleton
 
@@ -91,6 +93,7 @@ public class ObjectPooler : MonoBehaviour
         }
 
         activePoolDictonary[tag].Add(objectToSpawn);
+        activeObjects++;
 
         if (edibleFoodPoolDictonary.ContainsKey(tag))
         {
@@ -111,6 +114,13 @@ public class ObjectPooler : MonoBehaviour
         if (edibleFoodPoolDictonary.ContainsKey(tag))
         {
             RemoveObjectFromEdiblePool(obj);
+        }
+
+        activeObjects--;
+
+        if(activeObjects <= 0)
+        {
+            print("Game Over");
         }
     }
 

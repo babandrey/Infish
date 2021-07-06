@@ -1123,18 +1123,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2010658302, guid: f681a6990bb448743b5db13d1cc9d1f2, type: 3}
-      propertyPath: timer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2010658302, guid: f681a6990bb448743b5db13d1cc9d1f2, type: 3}
-      propertyPath: startTime
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 2010658302, guid: f681a6990bb448743b5db13d1cc9d1f2, type: 3}
-      propertyPath: aliensToSpawn
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2869517585180188804, guid: f681a6990bb448743b5db13d1cc9d1f2,
         type: 3}
       propertyPath: m_RootOrder
