@@ -8,7 +8,7 @@ public class ObjectPooler : MonoBehaviour
     private Dictionary<string, List<GameObject>> activePoolDictonary;
     private Dictionary<string, List<GameObject>> edibleFoodPoolDictonary;
 
-    private int activeObjects = 0;
+    private int activeFishObjects = 0;
 
     #region Singleton
 
@@ -93,7 +93,11 @@ public class ObjectPooler : MonoBehaviour
         }
 
         activePoolDictonary[tag].Add(objectToSpawn);
-        activeObjects++;
+
+        if (objectToSpawn.CompareTag("Fish"))
+        {
+            activeFishObjects++;
+        }
 
         if (edibleFoodPoolDictonary.ContainsKey(tag))
         {
@@ -116,9 +120,12 @@ public class ObjectPooler : MonoBehaviour
             RemoveObjectFromEdiblePool(obj);
         }
 
-        activeObjects--;
+        if (obj.CompareTag("Fish"))
+        {
+            activeFishObjects--;
+        }
 
-        if(activeObjects <= 0)
+        if (activeFishObjects <= 0)
         {
             print("Game Over");
         }

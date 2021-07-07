@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 930745079197020880}
   m_Layer: 9
   m_Name: Test10
-  m_TagString: Untagged
+  m_TagString: Pet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
