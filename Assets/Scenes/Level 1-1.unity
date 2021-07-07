@@ -796,6 +796,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: ObjectPooler
       objectReference: {fileID: 0}
+    - target: {fileID: 6068255718335703860, guid: 694ffcd9bf3220540bb05dedd6552e9d,
+        type: 3}
+      propertyPath: pools.Array.data[0].isFish
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6068255718335703860, guid: 694ffcd9bf3220540bb05dedd6552e9d,
+        type: 3}
+      propertyPath: pools.Array.data[3].isFish
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6068255718335703861, guid: 694ffcd9bf3220540bb05dedd6552e9d,
         type: 3}
       propertyPath: m_RootOrder
@@ -929,6 +939,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2010658302, guid: f681a6990bb448743b5db13d1cc9d1f2, type: 3}
+      propertyPath: startTime
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2869517585180188804, guid: f681a6990bb448743b5db13d1cc9d1f2,
         type: 3}
       propertyPath: m_RootOrder

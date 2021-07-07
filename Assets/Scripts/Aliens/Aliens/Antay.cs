@@ -8,15 +8,12 @@ public class Antay : Fish
 
         if (food != null)
         {
-            if (objectPooler.EdibleFoodPoolDictonary[food.Name].Contains(collision.transform.parent.gameObject))
+            foreach (GameObject foodObject in this.food)
             {
-                foreach (GameObject foodObject in this.food)
+                if (food.Name == foodObject.name)
                 {
-                    if (food.Name == foodObject.name)
-                    {
-                        Eat(food);
-                        return;
-                    }
+                    Eat(food);
+                    return;
                 }
             }
         }

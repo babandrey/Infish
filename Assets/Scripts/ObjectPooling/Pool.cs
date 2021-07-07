@@ -9,7 +9,6 @@ public class Pool
     [SerializeField] private GameObject prefab;
     [SerializeField] private int size;
     [SerializeField] private bool isEdible;
-    [SerializeField] private bool isFish;
 
     public string PoolTag
     {
@@ -30,10 +29,5 @@ public class Pool
     public bool IsEdible
     {
         get { return isEdible; }
-    }
-
-    public bool IsFish
-    {
-        get { return isFish; }
     }
 }
