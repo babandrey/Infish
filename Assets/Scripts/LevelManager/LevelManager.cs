@@ -12,6 +12,8 @@ public class LevelManager : Singleton<LevelManager>
         {
             GoldManager.Reset();
         }
+
+        GameStateManager.IsFighting = false;
     }
 
     public void ChangeLevel(int levelBuildIndex)
@@ -23,5 +25,7 @@ public class LevelManager : Singleton<LevelManager>
         {
             GoldManager.Reset();
         }
+
+        GameStateManager.IsFighting = false;
     }
 }

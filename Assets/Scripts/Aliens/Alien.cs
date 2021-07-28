@@ -23,7 +23,7 @@ public class Alien : MonoBehaviour
 
         if (health <= 0)
         {
-            DestroyAlien();
+            Destroy(gameObject);
         }
     }
 
@@ -34,9 +34,8 @@ public class Alien : MonoBehaviour
         rigidbody.AddForce(direction, ForceMode2D.Impulse);
     }
 
-    private void DestroyAlien()
+    void OnDestroy()
     {
         GameStateManager.RemoveActiveAlien(gameObject);
-        Destroy(gameObject);
     }
 }

@@ -10,7 +10,11 @@ public static class GameStateManager
     public static bool IsFighting
     {
         get { return isFighting; }
-        set { isFighting = value; }
+        set 
+        {
+            isFighting = value;
+            Debug.Log(isFighting);
+        }
     }
 
     public static void AddActiveAlien(GameObject alien)
@@ -27,6 +31,7 @@ public static class GameStateManager
             if(activeAliens.Count == 0)
             {
                 isFighting = false;
+                Debug.Log(isFighting);
             }
         }
         else
